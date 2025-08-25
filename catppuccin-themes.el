@@ -267,6 +267,13 @@
     `(ido-subdir ((,c :foreground ,blue)))
     `(ido-virtual ((,c :foreground ,sapphire)))
 
+    ;; isearch
+    `(isearch ((,c :background ,peach :foreground ,mantle)))
+    `(isearch-fail ((,c :background ,maroon :foreground ,mantle)))
+    `(isearch-group-1 ((,c :background ,lavender :foreground ,mantle)))
+    `(isearch-group-2 ((,c :background ,teal :foreground ,mantle)))
+    `(lazy-highlight ((,c :background ,sapphire :foreground ,mantle)))
+
     ;; line-number
     `(line-number ((,c :inherit default :background ,base :foreground ,surface1)))
     `(line-number-current-line ((,c :inherit (bold line-number) :foreground ,lavender)))
