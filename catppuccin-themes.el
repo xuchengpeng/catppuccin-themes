@@ -255,6 +255,18 @@
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
+    ;; icomplete
+    `(icomplete-first-match ((,c :foreground ,blue)))
+    `(icomplete-selected-match ((,c :inherit match)))
+
+    ;; ido
+    `(ido-first-match ((,c :foreground ,green)))
+    `(ido-incomplete-regexp ((,c :inherit warning)))
+    `(ido-indicator ((,c :foreground ,text :weight bold)))
+    `(ido-only-match ((,c :foreground ,green)))
+    `(ido-subdir ((,c :foreground ,blue)))
+    `(ido-virtual ((,c :foreground ,sapphire)))
+
     ;; line-number
     `(line-number ((,c :inherit default :background ,base :foreground ,surface1)))
     `(line-number-current-line ((,c :inherit (bold line-number) :foreground ,lavender)))
