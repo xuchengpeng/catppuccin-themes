@@ -15,7 +15,7 @@
     `(underline ((,c :underline t)))
     `(cursor ((,c :background ,rosewater)))
     `(ffap ((,c :inherit match)))
-    `(fringe ((,c :background ,base :foreground ,surface1)))
+    `(fringe ((,c :background unspecified :foreground ,surface1)))
     `(help-argument-name ((,c :foreground ,yellow)))
     `(help-key-binding ((,c :background ,mantle :foreground ,blue)))
     `(highlight ((,c :background ,surface0 :foreground ,text)))
@@ -29,7 +29,7 @@
     `(minibuffer-prompt ((,c :weight normal :foreground ,subtext0)))
     `(read-multiple-choice-face ((,c :inherit completions-first-difference)))
     `(region ((,c :background ,overlay0 :foreground ,text :extend t)))
-    `(scroll-bar ((,c :background ,surface0 :foreground unspecified)))
+    `(scroll-bar ((,c :background ,surface0 :foreground ,subtext0)))
     `(secondary-selection ((,c :background ,surface0 :foreground unspecified)))
     `(shadow ((,c :foreground ,overlay0)))
     `(success ((,c :foreground ,green)))
@@ -38,10 +38,9 @@
     `(tooltip ((,c :background ,surface0 :foreground ,overlay2)))
     `(tool-bar ((,c :background ,surface0 :foreground unspecified)))
     `(trailing-whitespace ((,c :background ,peach :foreground ,peach)))
-    `(border ((,c :background ,mantle :foreground ,text)))
-    `(window-divider ((,c :foreground ,mantle)))
-    `(vertical-border ((,c :foreground ,mantle)))
-    `(child-frame-border ((,c :background ,mantle)))
+    `(border ((,c :background ,crust :foreground ,text)))
+    `(vertical-border ((,c :foreground ,crust)))
+    `(child-frame-border ((,c :background ,crust)))
 
     ;; font-lock
     `(font-lock-bracket-face ((,c :foreground ,overlay2)))
@@ -137,7 +136,7 @@
     `(corfu-default ((,c :background ,surface0)))
     `(corfu-current ((,c :background ,surface1)))
     `(corfu-bar ((,c :background ,subtext0)))
-    `(corfu-border ((,c :inherit corfu-default)))
+    `(corfu-border ((,c :background ,crust)))
     `(corfu-annotations ((,c :inherit font-lock-comment-face)))
     `(corfu-deprecated ((,c :strike-through t)))
 
@@ -463,6 +462,11 @@
     `(whitespace-space-before-tab ((,c :inherit warning)))
     `(whitespace-tab ((,c :inherit whitespace-newline)))
     `(whitespace-trailing ((,c :inherit trailing-whitespace)))
+
+    ;; window-divider-mode
+    `(window-divider ((,c :foreground ,surface0)))
+    `(window-divider-first-pixel ((,c :foreground ,crust)))
+    `(window-divider-last-pixel ((,c :foreground ,crust)))
     )
   "Face specs for use with `catppuccin-themes-theme'.")
 
