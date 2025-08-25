@@ -306,6 +306,12 @@
     `(header-line-active ((,c :inherit mode-line-active)))
     `(header-line-inactive ((,c :inherit mode-line-inactive)))
     `(header-line-highlight ((,c :inherit mode-line-highlight)))
+
+    ;; orderless
+    `(orderless-match-face-0 ((,c :foreground ,blue :weight bold)))
+    `(orderless-match-face-1 ((,c :foreground ,mauve :weight bold)))
+    `(orderless-match-face-2 ((,c :foreground ,teal :weight bold)))
+    `(orderless-match-face-3 ((,c :foreground ,peach :weight bold)))
     )
   "Face specs for use with `catppuccin-themes-theme'.")
 
