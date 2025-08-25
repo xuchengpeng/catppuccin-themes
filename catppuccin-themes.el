@@ -413,12 +413,12 @@
     `(show-paren-mismatch ((,c :inherit warning)))
 
     ;; tab-bar
-    `(tab-bar ((,c :background ,base :foreground ,subtext0)))
-    `(tab-bar-tab ((,c :background ,surface0 :foreground ,text :weight bold)))
-    `(tab-bar-tab-group-current ((,c :background ,surface0 :foreground ,text :weight bold)))
-    `(tab-bar-tab-group-inactive ((,c :background ,base :foreground ,subtext0)))
+    `(tab-bar ((,c :background ,mantle :foreground ,subtext0)))
+    `(tab-bar-tab ((,c :background ,base :foreground ,text :weight bold)))
+    `(tab-bar-tab-group-current ((,c :background ,base :foreground ,text :weight bold)))
+    `(tab-bar-tab-group-inactive ((,c :background ,surface0 :foreground ,subtext0)))
     `(tab-bar-tab-highlight ((,c :background ,surface1)))
-    `(tab-bar-tab-inactive ((,c :background ,base :foreground ,subtext0)))
+    `(tab-bar-tab-inactive ((,c :background ,surface0 :foreground ,subtext0)))
     `(tab-bar-tab-ungrouped ((,c :inherit tab-bar-tab-inactive)))
 
     ;; tab-line
