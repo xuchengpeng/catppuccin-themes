@@ -29,12 +29,14 @@
     `(minibuffer-prompt ((,c :weight normal :foreground ,subtext0)))
     `(read-multiple-choice-face ((,c :inherit completions-first-difference)))
     `(region ((,c :background ,overlay0 :foreground ,text :extend t)))
+    `(scroll-bar ((,c :background ,surface0 :foreground unspecified)))
     `(secondary-selection ((,c :background ,surface0 :foreground unspecified)))
     `(shadow ((,c :foreground ,overlay0)))
     `(success ((,c :foreground ,green :weight bold)))
     `(warning ((,c :foreground ,yellow :weight bold)))
     `(error ((,c :foreground ,red :weight bold)))
     `(tooltip ((,c :background ,surface0 :foreground ,overlay2)))
+    `(tool-bar ((,c :background ,surface0 :foreground unspecified)))
     `(trailing-whitespace ((,c :inherit warning)))
     `(border ((,c :background ,mantle :foreground ,text)))
     `(window-divider ((,c :foreground ,mantle)))
@@ -115,12 +117,6 @@
     `(diary-time ((,c :foreground ,sky)))
     `(holiday ((,c :foreground ,pink)))
 
-    ; completions
-    `(completions-annotations ((,c :inherit font-lock-comment-face)))
-    `(completions-common-part ((,c :foreground ,sky)))
-    `(completions-first-difference ((,c :inherit bold)))
-    `(completions-highlight ((,c :inherit (highlight bold))))
-
     ;; compilation
     `(compilation-info ((,c :inherit bold :foreground ,green)))
     `(compilation-warning ((,c :inherit bold :foreground ,yellow)))
@@ -130,6 +126,20 @@
     `(compilation-mode-line-exit ((,c :inherit bold :foreground ,green)))
     `(compilation-mode-line-fail ((,c :inherit bold :foreground ,red)))
     `(compilation-mode-line-run ((,c :inherit bold :foreground ,yellow)))
+
+    ;; completions
+    `(completions-annotations ((,c :inherit font-lock-comment-face)))
+    `(completions-common-part ((,c :foreground ,sky)))
+    `(completions-first-difference ((,c :inherit bold)))
+    `(completions-highlight ((,c :inherit (highlight bold))))
+
+    ;; corfu
+    `(corfu-default ((,c :background ,surface0)))
+    `(corfu-current ((,c :background ,surface1)))
+    `(corfu-bar ((,c :background ,subtext0)))
+    `(corfu-border ((,c :inherit corfu-default)))
+    `(corfu-annotations ((,c :inherit font-lock-comment-face)))
+    `(corfu-deprecated ((,c :strike-through t)))
 
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
