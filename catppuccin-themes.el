@@ -93,6 +93,18 @@
     `(aw-minibuffer-leading-char-face ((,c :inherit aw-key-face)))
     `(aw-mode-line-face ((,c :inherit bold)))
 
+    ;; avy
+    `(avy-background-face ((,c :background ,base :foreground ,text)))
+    `(avy-goto-char-timer-face ((,c :background ,surface0 :foreground ,blue)))
+    `(avy-lead-face ((,c :background ,mauve :foreground ,base)))
+    `(avy-lead-face-0 ((,c :background ,yellow :foreground ,base)))
+    `(avy-lead-face-1 ((,c :background ,overlay0 :foreground ,base)))
+    `(avy-lead-face-2 ((,c :background ,sky :foreground ,base)))
+
+    ;; bookmark
+    `(bookmark-face ((,c :inherit font-lock-constant-face)))
+    `(bookmark-menu-bookmark ((,c :inherit bold)))
+
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
