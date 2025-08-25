@@ -141,6 +141,32 @@
     `(corfu-annotations ((,c :inherit font-lock-comment-face)))
     `(corfu-deprecated ((,c :strike-through t)))
 
+    ;; diff
+    `(diff-added ((,c :background ,surface0 :foreground ,green)))
+    `(diff-changed ((,c :background ,surface0 :foreground ,yellow)))
+    `(diff-changed-unspecified ((,c :inherit diff-changed)))
+    `(diff-removed ((,c :background ,surface0 :foreground ,red)))
+    `(diff-indicator-added ((,c :inherit diff-added)))
+    `(diff-indicator-changed ((,c :inherit diff-changed)))
+    `(diff-indicator-removed ((,c :inherit diff-removed)))
+    `(diff-refine-added ((,c :inherit diff-added :inverse-video t)))
+    `(diff-refine-changed ((,c :inherit diff-changed :inverse-video t)))
+    `(diff-refine-removed ((,c :inherit diff-removed :inverse-video t)))
+    `(diff-context (()))
+    `(diff-error ((,c :inherit error)))
+    `(diff-file-header ((,c :inherit bold)))
+    `(diff-function ((,c :background ,surface2)))
+    `(diff-header ((,c :foreground ,blue)))
+    `(diff-hunk-header ((,c :background ,surface2 :foreground ,text)))
+    `(diff-index ((,c :slant italic)))
+    `(diff-nonexistent ((,c :inherit bold)))
+
+    ;; diff-hl
+    `(diff-hl-change ((,c :foreground ,base :background ,yellow)))
+    `(diff-hl-delete ((,c :foreground ,base :background ,red)))
+    `(diff-hl-insert ((,c :foreground ,base :background ,green)))
+    `(diff-hl-reverted-hunk-highlight ((,c :inverse-video t)))
+
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
