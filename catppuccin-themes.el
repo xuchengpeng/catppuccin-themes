@@ -214,6 +214,10 @@
     `(flymake-warning ((,c :underline (:style wave :color ,yellow))))
     `(flymake-note ((,c :underline (:style wave :color ,green))))
 
+    ;; flyspell
+    `(flyspell-duplicate ((,c :underline (:style wave :color ,teal))))
+    `(flyspell-incorrect ((,c :underline (:style wave :color ,maroon))))
+
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
