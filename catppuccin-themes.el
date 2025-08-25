@@ -115,6 +115,12 @@
     `(diary-time ((,c :foreground ,sky)))
     `(holiday ((,c :foreground ,pink)))
 
+    ; completions
+    `(completions-annotations ((,c :inherit font-lock-comment-face)))
+    `(completions-common-part ((,c :foreground ,sky)))
+    `(completions-first-difference ((,c :inherit bold)))
+    `(completions-highlight ((,c :inherit (highlight bold))))
+
     ;; compilation
     `(compilation-info ((,c :inherit bold :foreground ,green)))
     `(compilation-warning ((,c :inherit bold :foreground ,yellow)))
