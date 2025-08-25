@@ -431,6 +431,12 @@
     `(tab-line-tab-inactive ((,c :inherit tab-bar-tab-inactive)))
     `(tab-line-tab-inactive-alternate ((,c :inherit tab-line-tab-inactive)))
     `(tab-line-tab-modified ((,c :foreground ,yellow)))
+
+    ;; vundo
+    `(vundo-default ((,c :inherit shadow)))
+    `(vundo-highlight ((,c :inherit (bold vundo-node) :foreground ,red)))
+    `(vundo-last-saved ((,c :inherit (bold vundo-node) :foreground ,blue)))
+    `(vundo-saved ((,c :inherit vundo-mode :foreground ,lavender)))
     )
   "Face specs for use with `catppuccin-themes-theme'.")
 
