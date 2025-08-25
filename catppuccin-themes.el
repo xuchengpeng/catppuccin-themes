@@ -407,6 +407,11 @@
     ;; shell
     `(sh-heredoc ((,c :inherit font-lock-string-face)))
     `(sh-quoted-exec ((,c :inherit font-lock-builtin-face)))
+
+    ;; show-paren
+    `(show-paren-match ((,c :foreground ,pink :weight bold)))
+    `(show-paren-match-expression ((,c :inherit match)))
+    `(show-paren-mismatch ((,c :inherit warning)))
     )
   "Face specs for use with `catppuccin-themes-theme'.")
 
