@@ -412,6 +412,25 @@
     `(show-paren-match ((,c :foreground ,pink :weight bold)))
     `(show-paren-match-expression ((,c :inherit match)))
     `(show-paren-mismatch ((,c :inherit warning)))
+
+    ;; tab-bar
+    `(tab-bar ((,c :background ,base :foreground ,subtext0)))
+    `(tab-bar-tab ((,c :background ,surface0 :foreground ,text :weight bold)))
+    `(tab-bar-tab-group-current ((,c :background ,surface0 :foreground ,text :weight bold)))
+    `(tab-bar-tab-group-inactive ((,c :background ,base :foreground ,subtext0)))
+    `(tab-bar-tab-highlight ((,c :background ,surface1)))
+    `(tab-bar-tab-inactive ((,c :background ,base :foreground ,subtext0)))
+    `(tab-bar-tab-ungrouped ((,c :inherit tab-bar-tab-inactive)))
+
+    ;; tab-line
+    `(tab-line ((,c :inherit tab-bar)))
+    `(tab-line-close-highlight ((,c :foreground ,peach)))
+    `(tab-line-highlight ((,c :background ,surface1)))
+    `(tab-line-tab ((,c :inherit tab-bar-tab)))
+    `(tab-line-tab-current ((,c :inherit tab-line-tab)))
+    `(tab-line-tab-inactive ((,c :inherit tab-bar-tab-inactive)))
+    `(tab-line-tab-inactive-alternate ((,c :inherit tab-line-tab-inactive)))
+    `(tab-line-tab-modified ((,c :foreground ,yellow)))
     )
   "Face specs for use with `catppuccin-themes-theme'.")
 
