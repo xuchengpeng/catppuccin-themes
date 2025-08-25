@@ -195,6 +195,20 @@
     `(elfeed-search-unread-count-face ((,c :foreground ,pink)))
     `(elfeed-search-unread-title-face ((,c :foreground ,red)))
 
+    ;; eshell
+    `(eshell-prompt ((,c :foreground ,blue :weight bold)))
+    `(eshell-ls-archive ((,c :foreground ,mauve)))
+    `(eshell-ls-backup ((,c :foreground ,yellow)))
+    `(eshell-ls-clutter ((,c :foreground ,red :weight bold)))
+    `(eshell-ls-directory ((,c :foreground ,blue :weight bold)))
+    `(eshell-ls-executable ((,c :foreground ,green :weight bold)))
+    `(eshell-ls-missing ((,c :foreground ,red :weight bold)))
+    `(eshell-ls-product ((,c :foreground ,peach)))
+    `(eshell-ls-readonly ((,c :foreground ,flamingo)))
+    `(eshell-ls-special ((,c :foreground ,pink :weight bold)))
+    `(eshell-ls-symlink ((,c :foreground ,sapphire :weight bold)))
+    `(eshell-ls-unreadable ((,c :foreground ,text)))
+
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
