@@ -403,6 +403,10 @@
     `(reb-match-3 ((,c :background ,mauve :foreground ,mantle)))
     `(reb-regexp-grouping-backslash ((,c :inherit font-lock-regexp-grouping-backslash)))
     `(reb-regexp-grouping-construct ((,c :inherit font-lock-regexp-grouping-construct)))
+
+    ;; shell
+    `(sh-heredoc ((,c :inherit font-lock-string-face)))
+    `(sh-quoted-exec ((,c :inherit font-lock-builtin-face)))
     )
   "Face specs for use with `catppuccin-themes-theme'.")
 
