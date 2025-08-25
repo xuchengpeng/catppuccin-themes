@@ -167,6 +167,19 @@
     `(diff-hl-insert ((,c :foreground ,base :background ,green)))
     `(diff-hl-reverted-hunk-highlight ((,c :inverse-video t)))
 
+    ;; dired
+    `(dired-broken-symlink ((,c :background ,red :foreground ,text)))
+    `(dired-directory ((,c :foreground ,blue)))
+    `(dired-flagged ((,c :foreground ,maroon :weight bold)))
+    `(dired-header ((,c :foreground ,sapphire :weight bold)))
+    `(dired-ignored ((,c :inherit font-lock-comment-face)))
+    `(dired-mark ((,c :inherit dired-marked)))
+    `(dired-marked ((,c :weight bold)))
+    `(dired-perm-write ((,c :foreground ,green)))
+    `(dired-special ((,c :foreground ,yellow)))
+    `(dired-symlink ((,c :foreground ,pink)))
+    `(dired-warning ((,c :inherit warning)))
+
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
