@@ -86,6 +86,13 @@
     `(ansi-color-bright-cyan ((,c :background ,teal :foreground ,teal)))
     `(ansi-color-bright-white ((,c :background ,subtext0 :foreground ,subtext0)))
 
+    ;; ace-window
+    `(aw-background-face ((,c :foreground "gray50")))
+    `(aw-key-face ((,c :inherit bold :foreground ,blue)))
+    `(aw-leading-char-face ((,c :inherit bold :height 1.5 :foreground ,red)))
+    `(aw-minibuffer-leading-char-face ((,c :inherit aw-key-face)))
+    `(aw-mode-line-face ((,c :inherit bold)))
+
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
