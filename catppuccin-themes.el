@@ -105,6 +105,16 @@
     `(bookmark-face ((,c :inherit font-lock-constant-face)))
     `(bookmark-menu-bookmark ((,c :inherit bold)))
 
+    ;; calendar and diary
+    `(calendar-month-header ((,c :inherit bold)))
+    `(calendar-today ((,c :inherit bold :underline t)))
+    `(calendar-weekday-header ((,c :foreground ,sky)))
+    `(calendar-weekend-header ((,c :foreground ,red)))
+    `(diary ((,c :foreground ,sky)))
+    `(diary-anniversary ((,c :foreground ,red)))
+    `(diary-time ((,c :foreground ,sky)))
+    `(holiday ((,c :foreground ,pink)))
+
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
