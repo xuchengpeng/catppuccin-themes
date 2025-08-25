@@ -437,6 +437,19 @@
     `(vundo-highlight ((,c :inherit (bold vundo-node) :foreground ,red)))
     `(vundo-last-saved ((,c :inherit (bold vundo-node) :foreground ,blue)))
     `(vundo-saved ((,c :inherit vundo-mode :foreground ,lavender)))
+
+    ;; which-func-mode
+    `(which-func ((,c :inherit font-lock-function-name-face)))
+
+    ;; which-key
+    `(which-key-command-description-face ((,c :foreground ,text)))
+    `(which-key-group-description-face ((,c :foreground ,mauve)))
+    `(which-key-highlighted-command-face ((,c :inherit warning :underline t)))
+    `(which-key-key-face ((,c :inherit font-lock-builtin-face)))
+    `(which-key-local-map-description-face ((,c :foreground ,green)))
+    `(which-key-note-face ((,c :inherit shadow)))
+    `(which-key-separator-face ((,c :inherit shadow)))
+    `(which-key-special-key-face ((,c :inherit error)))
     )
   "Face specs for use with `catppuccin-themes-theme'.")
 
