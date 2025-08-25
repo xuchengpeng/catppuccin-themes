@@ -280,6 +280,21 @@
     `(line-number-major-tick ((,c :inherit line-number :foreground ,red)))
     `(line-number-minor-tick ((,c :inherit line-number :foreground ,surface1)))
 
+    ;; message
+    `(message-cited-text-1 ((,c :foreground ,green)))
+    `(message-cited-text-2 ((,c :foreground ,yellow)))
+    `(message-cited-text-3 ((,c :foreground ,overlay0)))
+    `(message-cited-text-4 ((,c :foreground ,overlay0)))
+    `(message-header-name ((,c :foreground ,green)))
+    `(message-header-newsgroups ((,c :foreground ,mauve)))
+    `(message-header-to ((,c :foreground ,text :weight bold)))
+    `(message-header-cc ((,c :foreground ,text :weight bold)))
+    `(message-header-subject ((,c :foreground ,blue)))
+    `(message-header-xheader ((,c :foreground ,lavender)))
+    `(message-header-other ((,c :foreground ,mauve)))
+    `(message-mml ((,c :foreground ,green :weight normal)))
+    `(message-separator ((,c :background ,overlay0)))
+
     ;; mode-line / header-line
     `(mode-line ((,c :background ,mantle :box ,mantle :foreground ,text)))
     `(mode-line-buffer-id ((,c :inherit bold)))
