@@ -180,6 +180,21 @@
     `(dired-symlink ((,c :foreground ,pink)))
     `(dired-warning ((,c :inherit warning)))
 
+    ;; elfeed
+    `(elfeed-log-date-face ((,c :inherit elfeed-search-date-face)))
+    `(elfeed-log-debug-level-face ((,c :weight bold)))
+    `(elfeed-log-info-level-face ((,c :inherit success)))
+    `(elfeed-log-warn-level-face ((,c :inherit warning)))
+    `(elfeed-log-error-level-face ((,c :inherit error)))
+    `(elfeed-search-date-face ((,c :foreground ,subtext0)))
+    `(elfeed-search-feed-face ((,c :foreground ,text :weight bold)))
+    `(elfeed-search-filter-face ((,c :foreground ,green :weight bold)))
+    `(elfeed-search-last-update-face ((,c :weight bold)))
+    `(elfeed-search-tag-face ((,c :foreground ,green)))
+    `(elfeed-search-title-face ((,c :foreground ,text)))
+    `(elfeed-search-unread-count-face ((,c :foreground ,pink)))
+    `(elfeed-search-unread-title-face ((,c :foreground ,red)))
+
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
