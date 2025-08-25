@@ -209,6 +209,11 @@
     `(eshell-ls-symlink ((,c :foreground ,sapphire :weight bold)))
     `(eshell-ls-unreadable ((,c :foreground ,text)))
 
+    ;; flymake
+    `(flymake-error ((,c :underline (:style wave :color ,red))))
+    `(flymake-warning ((,c :underline (:style wave :color ,yellow))))
+    `(flymake-note ((,c :underline (:style wave :color ,green))))
+
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
