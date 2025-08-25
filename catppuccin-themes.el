@@ -115,6 +115,16 @@
     `(diary-time ((,c :foreground ,sky)))
     `(holiday ((,c :foreground ,pink)))
 
+    ;; compilation
+    `(compilation-info ((,c :inherit bold :foreground ,green)))
+    `(compilation-warning ((,c :inherit bold :foreground ,yellow)))
+    `(compilation-error ((,c :inherit bold :foreground ,red)))
+    `(compilation-line-number ((,c :inherit shadow)))
+    `(compilation-column-number ((,c :inherit compilation-line-number)))
+    `(compilation-mode-line-exit ((,c :inherit bold :foreground ,green)))
+    `(compilation-mode-line-fail ((,c :inherit bold :foreground ,red)))
+    `(compilation-mode-line-run ((,c :inherit bold :foreground ,yellow)))
+
     ;; hl-line
     `(hl-line ((,c :background ,surface0 :extend t)))
 
