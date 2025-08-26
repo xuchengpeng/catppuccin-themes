@@ -253,7 +253,7 @@
     `(lazy-highlight ((,c :background ,sapphire :foreground ,mantle)))
 
     ;; line-number
-    `(line-number ((,c :inherit default :background ,base :foreground ,surface1)))
+    `(line-number ((,c :inherit default :background ,base :foreground ,overlay1)))
     `(line-number-current-line ((,c :inherit (bold line-number) :foreground ,lavender)))
     `(line-number-major-tick ((,c :inherit line-number :foreground ,red)))
     `(line-number-minor-tick ((,c :inherit line-number :foreground ,surface1)))
