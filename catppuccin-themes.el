@@ -64,7 +64,7 @@
     `(font-lock-regexp-grouping-construct ((,c :foreground ,red)))
     `(font-lock-string-face ((,c :foreground ,green)))
     `(font-lock-type-face ((,c :foreground ,yellow)))
-    `(font-lock-variable-name-face ((,c :foreground ,maroon)))
+    `(font-lock-variable-name-face ((,c :foreground ,text)))
     `(font-lock-variable-use-face ((,c :foreground ,text)))
     `(font-lock-warning-face ((,c :foreground ,yellow)))
 
