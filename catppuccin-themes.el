@@ -274,10 +274,10 @@
     `(message-separator ((,c :background ,overlay0)))
 
     ;; mode-line / header-line
-    `(mode-line ((,c :background ,mantle :box ,mantle :foreground ,text)))
+    `(mode-line ((,c :background ,crust :foreground ,text :box ,crust)))
     `(mode-line-buffer-id ((,c :inherit bold)))
     `(mode-line-active ((,c :inherit mode-line)))
-    `(mode-line-inactive ((,c :background ,crust :foreground ,overlay0 :box ,crust)))
+    `(mode-line-inactive ((,c :background ,mantle :foreground ,overlay1 :box ,mantle)))
     `(mode-line-emphasis ((,c :inherit bold :foreground ,blue)))
     `(mode-line-highlight ((,c :background ,surface0 :foreground ,text :box ,text)))
     `(header-line ((,c :inherit mode-line)))
