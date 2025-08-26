@@ -410,6 +410,9 @@
     `(tab-line-tab-inactive-alternate ((,c :inherit tab-line-tab-inactive)))
     `(tab-line-tab-modified ((,c :foreground ,yellow)))
 
+    ;; vertico
+    `(vertico-current ((,c :inherit highlight :weight bold)))
+
     ;; vundo
     `(vundo-default ((,c :inherit shadow)))
     `(vundo-highlight ((,c :inherit (bold vundo-node) :foreground ,red)))
