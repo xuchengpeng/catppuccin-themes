@@ -31,7 +31,7 @@
     `(region ((,c :background ,overlay0 :foreground ,text :extend t)))
     `(scroll-bar ((,c :background ,surface0 :foreground ,subtext0)))
     `(secondary-selection ((,c :background ,surface0 :foreground unspecified)))
-    `(shadow ((,c :foreground ,overlay0)))
+    `(shadow ((,c :foreground ,overlay2)))
     `(success ((,c :foreground ,green)))
     `(warning ((,c :foreground ,yellow)))
     `(error ((,c :foreground ,red)))
