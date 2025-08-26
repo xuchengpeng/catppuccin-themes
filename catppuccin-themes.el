@@ -246,7 +246,7 @@
     `(ido-virtual ((,c :foreground ,sapphire)))
 
     ;; isearch
-    `(isearch ((,c :background ,peach :foreground ,mantle)))
+    `(isearch ((,c :background ,red :foreground ,mantle)))
     `(isearch-fail ((,c :background ,maroon :foreground ,mantle)))
     `(isearch-group-1 ((,c :background ,lavender :foreground ,mantle)))
     `(isearch-group-2 ((,c :background ,teal :foreground ,mantle)))
