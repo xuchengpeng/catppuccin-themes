@@ -38,9 +38,9 @@
     `(tooltip ((,c :background ,surface0 :foreground ,overlay2)))
     `(tool-bar ((,c :background ,surface0 :foreground unspecified)))
     `(trailing-whitespace ((,c :background ,peach :foreground ,peach)))
-    `(border ((,c :background ,crust :foreground ,text)))
-    `(vertical-border ((,c :foreground ,crust)))
-    `(child-frame-border ((,c :background ,crust)))
+    `(border ((,c :background ,overlay0 :foreground ,text)))
+    `(vertical-border ((,c :foreground ,overlay0)))
+    `(child-frame-border ((,c :background ,overlay0)))
 
     ;; font-lock
     `(font-lock-bracket-face ((,c :foreground ,overlay2)))
@@ -136,7 +136,7 @@
     `(corfu-default ((,c :background ,surface0)))
     `(corfu-current ((,c :background ,surface1)))
     `(corfu-bar ((,c :background ,subtext0)))
-    `(corfu-border ((,c :background ,crust)))
+    `(corfu-border ((,c :background ,overlay0)))
     `(corfu-annotations ((,c :inherit font-lock-comment-face)))
     `(corfu-deprecated ((,c :strike-through t)))
 
