@@ -28,7 +28,7 @@
     `(menu ((,c :background ,highlight :foreground ,text :inverse-video nil)))
     `(minibuffer-prompt ((,c :weight normal :foreground ,subtext0)))
     `(read-multiple-choice-face ((,c :inherit completions-first-difference)))
-    `(region ((,c :background ,surface2 :foreground ,text :extend t)))
+    `(region ((,c :background ,surface1 :foreground ,text :extend t)))
     `(scroll-bar ((,c :background ,surface0 :foreground ,subtext0)))
     `(secondary-selection ((,c :background ,surface0 :foreground unspecified)))
     `(shadow ((,c :foreground ,overlay2)))
