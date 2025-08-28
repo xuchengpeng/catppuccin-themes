@@ -47,12 +47,12 @@
       (crust . "#232634")
       ;; extended
       (highlight . "#3a3e4f") ; base lighten 5%
-      (added . "#425336") ; green darken 60%
-      (added-refine . "#637d52") ; green darken 40%
-      (changed . "#5b5039") ; yellow darken 60%
+      (added . "#425437") ; green darken 60%
+      (added-refine . "#647d52") ; green darken 40%
+      (changed . "#5c503a") ; yellow darken 60%
       (changed-refine . "#897856") ; yellow darken 40%
-      (removed . "#5c3434") ; red darken 60%
-      (removed-refine . "#8a4e4f") ; red darken 40%
+      (removed . "#5c3435") ; red darken 60%
+      (removed-refine . "#8b4e4f") ; red darken 40%
       )
     "Catppuccin frappe palette.")
 

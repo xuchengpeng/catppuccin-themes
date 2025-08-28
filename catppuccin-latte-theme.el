@@ -46,7 +46,7 @@
       (mantle . "#e6e9ef")
       (crust . "#dce0e8")
       ;; extended
-      (highlight . "#e3e4e8") ; base darken 5%
+      (highlight . "#e3e5e9") ; base darken 5%
       (added . "#b3d9aa") ; green lighten 60%
       (added-refine . "#8cc680") ; green lighten 40%
       (changed . "#f2d2a5") ; yellow lighten 60%
