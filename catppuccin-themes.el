@@ -141,16 +141,16 @@
     `(corfu-deprecated ((,c :strike-through t)))
 
     ;; diff
-    `(diff-added ((,c :background ,surface0 :foreground ,green)))
-    `(diff-changed ((,c :background ,surface0 :foreground ,yellow)))
+    `(diff-added ((,c :background ,added :foreground ,text)))
+    `(diff-changed ((,c :background ,changed :foreground ,text)))
     `(diff-changed-unspecified ((,c :inherit diff-changed)))
-    `(diff-removed ((,c :background ,surface0 :foreground ,red)))
+    `(diff-removed ((,c :background ,removed :foreground ,text)))
     `(diff-indicator-added ((,c :inherit diff-added)))
     `(diff-indicator-changed ((,c :inherit diff-changed)))
     `(diff-indicator-removed ((,c :inherit diff-removed)))
-    `(diff-refine-added ((,c :inherit diff-added :inverse-video t)))
-    `(diff-refine-changed ((,c :inherit diff-changed :inverse-video t)))
-    `(diff-refine-removed ((,c :inherit diff-removed :inverse-video t)))
+    `(diff-refine-added ((,c :background ,added-refine :foreground ,text)))
+    `(diff-refine-changed ((,c :background ,changed-refine :foreground ,text)))
+    `(diff-refine-removed ((,c :background ,removed-refine :foreground ,text)))
     `(diff-context (()))
     `(diff-error ((,c :inherit error)))
     `(diff-file-header ((,c :inherit bold)))
@@ -161,9 +161,9 @@
     `(diff-nonexistent ((,c :inherit bold)))
 
     ;; diff-hl
-    `(diff-hl-change ((,c :foreground ,base :background ,yellow)))
-    `(diff-hl-delete ((,c :foreground ,base :background ,red)))
-    `(diff-hl-insert ((,c :foreground ,base :background ,green)))
+    `(diff-hl-change ((,c :foreground ,base :background ,changed-refine)))
+    `(diff-hl-delete ((,c :foreground ,base :background ,removed-refine)))
+    `(diff-hl-insert ((,c :foreground ,base :background ,added-refine)))
     `(diff-hl-reverted-hunk-highlight ((,c :inverse-video t)))
 
     ;; dired

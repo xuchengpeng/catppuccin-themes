@@ -47,6 +47,12 @@
       (crust . "#181926")
       ;; extended
       (highlight . "#2f3244") ; base lighten 5%
+      (added . "#42573b") ; green darken 60%
+      (added-refine . "#638259") ; green darken 40%
+      (changed . "#5f543f") ; yellow darken 60%
+      (changed-refine . "#8e7f5f") ; yellow darken 40%
+      (removed . "#5e363c") ; red darken 60%
+      (removed-refine . "#8e515a") ; red darken 40%
       )
     "Catppuccin macchiato palette.")
 

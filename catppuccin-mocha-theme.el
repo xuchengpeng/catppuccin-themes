@@ -47,6 +47,12 @@
       (crust . "#11111b")
       ;; extended
       (highlight . "#292938") ; base lighten 5%
+      (added . "#425a40") ; green darken 60%
+      (added-refine . "#638860") ; green darken 40%
+      (changed . "#635a46") ; yellow darken 60%
+      (changed-refine . "#958769") ; yellow darken 40%
+      (removed . "#613743") ; red darken 60%
+      (removed-refine . "#915364") ; red darken 40%
       )
     "Catppuccin mocha palette.")
 
