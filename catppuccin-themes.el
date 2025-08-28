@@ -332,7 +332,7 @@
     `(org-agenda-structure-filter ((,c :inherit org-agenda-structure :foreground ,yellow)))
     `(org-agenda-structure-secondary ((,c :inherit font-lock-doc-face)))
     `(org-archived ((,c :background ,mantle :foreground ,text)))
-    `(org-block ((,c :background ,mantle :foreground ,green :extend t)))
+    `(org-block ((,c :background ,mantle :foreground ,text :extend t)))
     `(org-block-begin-line ((,c :inherit org-meta-line :background ,mantle :extend t)))
     `(org-block-end-line ((,c :inherit org-block-begin-line)))
     `(org-checkbox ((,c :foreground ,yellow)))
