@@ -18,7 +18,8 @@
     :family 'catppuccin)
 
   (defconst catppuccin-macchiato-palette
-    '((rosewater . "#f4dbd6")
+    '(;; basic
+      (rosewater . "#f4dbd6")
       (flamingo . "#f0c6c6")
       (pink . "#f5bde6")
       (mauve . "#c6a0f6")
@@ -43,7 +44,10 @@
       (surface0 . "#363a4f")
       (base . "#24273a")
       (mantle . "#1e2030")
-      (crust . "#181926"))
+      (crust . "#181926")
+      ;; extended
+      (highlight . "#2f3244") ; base lighten 5%
+      )
     "Catppuccin macchiato palette.")
 
   (defcustom catppuccin-macchiato-palette-overrides nil

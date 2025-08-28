@@ -18,7 +18,8 @@
     :family 'catppuccin)
 
   (defconst catppuccin-frappe-palette
-    '((rosewater . "#f2d5cf")
+    '(;; basic
+      (rosewater . "#f2d5cf")
       (flamingo . "#eebebe")
       (pink . "#f4b8e4")
       (mauve . "#ca9ee6")
@@ -43,7 +44,10 @@
       (surface0 . "#414559")
       (base . "#303446")
       (mantle . "#292c3c")
-      (crust . "#232634"))
+      (crust . "#232634")
+      ;; extended
+      (highlight . "#3a3e4f") ; base lighten 5%
+      )
     "Catppuccin frappe palette.")
 
   (defcustom catppuccin-frappe-palette-overrides nil

@@ -18,14 +18,14 @@
     `(fringe ((,c :background unspecified :foreground ,surface1)))
     `(help-argument-name ((,c :foreground ,maroon)))
     `(help-key-binding ((,c :background ,mantle :foreground ,blue :box (:line-width (-1 . -1) :color ,crust :style nil))))
-    `(highlight ((,c :background ,surface0 :foreground ,text)))
+    `(highlight ((,c :background ,highlight :foreground ,text)))
     `(info-menu-star ((,c :foreground ,red)))
     `(info-quoted-name ((,c :foreground ,subtext1)))
     `(info-string ((,c :foreground ,green)))
     `(link ((,c :foreground ,blue :underline t)))
     `(link-visited ((,c :foreground ,lavender :underline t)))
     `(match ((,c :background ,red :foreground ,mantle)))
-    `(menu ((,c :background ,surface0 :inverse-video nil :foreground ,text)))
+    `(menu ((,c :background ,highlight :foreground ,text :inverse-video nil)))
     `(minibuffer-prompt ((,c :weight normal :foreground ,subtext0)))
     `(read-multiple-choice-face ((,c :inherit completions-first-difference)))
     `(region ((,c :background ,surface2 :foreground ,text :extend t)))
@@ -231,7 +231,7 @@
     `(hi-yellow ((,c :background ,base :foreground ,yellow :inverse-video t)))
 
     ;; hl-line
-    `(hl-line ((,c :background ,surface0 :extend t)))
+    `(hl-line ((,c :inherit highlight :extend t)))
 
     ;; icomplete
     `(icomplete-first-match ((,c :foreground ,blue)))
@@ -254,7 +254,7 @@
 
     ;; line-number
     `(line-number ((,c :inherit default :background ,base :foreground ,overlay1)))
-    `(line-number-current-line ((,c :inherit (bold line-number) :foreground ,lavender)))
+    `(line-number-current-line ((,c :inherit line-number :foreground ,lavender :weight bold)))
     `(line-number-major-tick ((,c :inherit line-number :foreground ,red)))
     `(line-number-minor-tick ((,c :inherit line-number :foreground ,surface1)))
 

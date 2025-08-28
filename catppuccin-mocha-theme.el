@@ -18,7 +18,8 @@
     :family 'catppuccin)
 
   (defconst catppuccin-mocha-palette
-    '((rosewater . "#f5e0dc")
+    '(;; basic
+      (rosewater . "#f5e0dc")
       (flamingo . "#f2cdcd")
       (pink . "#f5c2e7")
       (mauve . "#cba6f7")
@@ -43,7 +44,10 @@
       (surface0 . "#313244")
       (base . "#1e1e2e")
       (mantle . "#181825")
-      (crust . "#11111b"))
+      (crust . "#11111b")
+      ;; extended
+      (highlight . "#292938") ; base lighten 5%
+      )
     "Catppuccin mocha palette.")
 
   (defcustom catppuccin-mocha-palette-overrides nil
