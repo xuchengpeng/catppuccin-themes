@@ -179,6 +179,24 @@
     `(dired-symlink ((,c :foreground ,pink)))
     `(dired-warning ((,c :inherit warning)))
 
+    ;; ediff
+    `(ediff-current-diff-A ((,c :background ,removed :foreground ,text)))
+    `(ediff-current-diff-Ancestor ((,c :background ,surface1)))
+    `(ediff-current-diff-B ((,c :background ,added :foreground ,text)))
+    `(ediff-current-diff-C ((,c :background ,changed :foreground ,text)))
+    `(ediff-even-diff-A ((,c :background ,highlight)))
+    `(ediff-even-diff-Ancestor ((,c :background ,highlight)))
+    `(ediff-even-diff-B ((,c :background ,highlight)))
+    `(ediff-even-diff-C ((,c :background ,highlight)))
+    `(ediff-fine-diff-A ((,c :background ,removed-refine :foreground ,text)))
+    `(ediff-fine-diff-Ancestor ((,c :background ,sapphire :foreground ,text)))
+    `(ediff-fine-diff-B ((,c :background ,added-refine :foreground ,text)))
+    `(ediff-fine-diff-C ((,c :background ,changed-refine :foreground ,text)))
+    `(ediff-odd-diff-A ((,c :inherit ediff-even-diff-A)))
+    `(ediff-odd-diff-Ancestor ((,c :inherit ediff-even-diff-Ancestor)))
+    `(ediff-odd-diff-B ((,c :inherit ediff-even-diff-B)))
+    `(ediff-odd-diff-C ((,c :inherit ediff-even-diff-C)))
+
     ;; elfeed
     `(elfeed-log-date-face ((,c :inherit elfeed-search-date-face)))
     `(elfeed-log-debug-level-face ((,c :weight bold)))
