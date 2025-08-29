@@ -130,7 +130,7 @@
     `(completions-annotations ((,c :inherit font-lock-comment-face)))
     `(completions-common-part ((,c :foreground ,sky)))
     `(completions-first-difference ((,c :inherit bold)))
-    `(completions-highlight ((,c :inherit (highlight bold))))
+    `(completions-highlight ((,c :background ,highlight :weight bold)))
 
     ;; corfu
     `(corfu-default ((,c :background ,surface0)))
@@ -249,7 +249,7 @@
     `(hi-yellow ((,c :background ,base :foreground ,yellow :inverse-video t)))
 
     ;; hl-line
-    `(hl-line ((,c :inherit highlight :extend t)))
+    `(hl-line ((,c :background ,highlight :extend t)))
 
     ;; icomplete
     `(icomplete-first-match ((,c :foreground ,blue)))
@@ -429,7 +429,7 @@
     `(tab-line-tab-modified ((,c :foreground ,yellow)))
 
     ;; vertico
-    `(vertico-current ((,c :inherit highlight :weight bold)))
+    `(vertico-current ((,c :background ,highlight :weight bold)))
 
     ;; vundo
     `(vundo-default ((,c :inherit shadow)))
