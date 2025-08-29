@@ -13,7 +13,7 @@
   ;;;###theme-autoload
   (deftheme catppuccin-mocha
     "Catppuccin mocha."
-    :background-mode 'light
+    :background-mode 'dark
     :kind 'color-scheme
     :family 'catppuccin)
 

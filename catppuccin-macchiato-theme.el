@@ -13,7 +13,7 @@
   ;;;###theme-autoload
   (deftheme catppuccin-macchiato
     "Catppuccin macchiato."
-    :background-mode 'light
+    :background-mode 'dark
     :kind 'color-scheme
     :family 'catppuccin)
 
