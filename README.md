@@ -22,7 +22,7 @@ Load the theme in your configuration:
        `(git-gutter-fr:modified ((,c :foreground ,yellow)))))
    ```
 
-2. Change color palettes by customize `catppuccin-<style>-palette-overrides`, style is an choice with `latte`, `frappe`, `macchiato` or `mocha`.:
+2. Change color palettes by customize `catppuccin-<style>-palette-overrides`, style is an choice with `latte`, `frappe`, `macchiato` or `mocha`:
    ``` emacs-lisp
    (setq catppuccin-latte-palette-overrides
          '((blue . "#2e7de9")
