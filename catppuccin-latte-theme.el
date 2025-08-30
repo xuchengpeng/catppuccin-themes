@@ -46,13 +46,13 @@
       (mantle . "#e6e9ef")
       (crust . "#dce0e8")
       ;; extended
-      (highlight . "#e3e5e9") ; base darken 5%
-      (added . "#b3d9aa") ; green lighten 60%
-      (added-refine . "#8cc680") ; green lighten 40%
-      (changed . "#f2d2a5") ; yellow lighten 60%
-      (changed-refine . "#ecbb77") ; yellow lighten 40%
-      (removed . "#ed9fb0") ; red lighten 60%
-      (removed-refine . "#e46f88") ; red lighten 40%
+      (highlight . "#e3e4e8") ; base darken 5%
+      (added . "#b2d9aa") ; green lighten 60%
+      (added-refine . "#8cc67f") ; green lighten 40%
+      (changed . "#f2d1a4") ; yellow lighten 60%
+      (changed-refine . "#ebbb77") ; yellow lighten 40%
+      (removed . "#ed9faf") ; red lighten 60%
+      (removed-refine . "#e36f88") ; red lighten 40%
       )
     "Catppuccin latte palette.")
 
