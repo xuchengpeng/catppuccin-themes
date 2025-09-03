@@ -409,6 +409,17 @@
     `(show-paren-match-expression ((,c :inherit match)))
     `(show-paren-mismatch ((,c :inherit warning)))
 
+    ;; symbol-overlay
+    `(symbol-overlay-default-face ((,c :background ,surface0)))
+    `(symbol-overlay-face-1 ((,c :background ,blue :foreground ,mantle)))
+    `(symbol-overlay-face-2 ((,c :background ,mauve :foreground ,mantle)))
+    `(symbol-overlay-face-3 ((,c :background ,yellow :foreground ,mantle)))
+    `(symbol-overlay-face-4 ((,c :background ,pink :foreground ,mantle)))
+    `(symbol-overlay-face-5 ((,c :background ,red :foreground ,mantle)))
+    `(symbol-overlay-face-6 ((,c :background ,peach :foreground ,mantle)))
+    `(symbol-overlay-face-7 ((,c :background ,green :foreground ,mantle)))
+    `(symbol-overlay-face-8 ((,c :background ,sky :foreground ,mantle)))
+
     ;; tab-bar
     `(tab-bar ((,c :background ,mantle :foreground ,subtext0)))
     `(tab-bar-tab ((,c :background ,base :foreground ,text :weight bold)))
@@ -474,7 +485,7 @@
   '(
     ;;;; ansi-colors
     `(ansi-color-names-vector [,base ,red ,green ,yellow ,blue ,pink ,teal ,text])
-  )
+    )
   "Custom variables for `catppuccin-themes-theme'.")
 
 ;;; Theme macros
