@@ -26,7 +26,7 @@
     `(link-visited ((,c :foreground ,lavender :underline t)))
     `(match ((,c :background ,red :foreground ,mantle)))
     `(menu ((,c :background ,highlight :foreground ,text :inverse-video nil)))
-    `(minibuffer-prompt ((,c :weight normal :foreground ,subtext0)))
+    `(minibuffer-prompt ((,c :foreground ,teal :weight normal)))
     `(read-multiple-choice-face ((,c :inherit completions-first-difference)))
     `(region ((,c :background ,surface1 :foreground ,text :extend t)))
     `(scroll-bar ((,c :background ,surface0 :foreground ,subtext0)))
