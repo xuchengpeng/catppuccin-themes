@@ -15,11 +15,17 @@ Load the theme in your configuration:
 
 1. Add plugin support, for example:
    ``` emacs-lisp
-   (catppuccin-themes-with-colors
-     (custom-set-faces
-       `(git-gutter-fr:added ((,c :foreground ,green)))
-       `(git-gutter-fr:deleted ((,c :foreground ,red)))
-       `(git-gutter-fr:modified ((,c :foreground ,yellow)))))
+   (defun +catppuccin-themes-custom-faces (&rest _)
+    (catppuccin-themes-with-colors
+      (custom-set-faces
+       `(echo-bar-red-face ((,c :foreground ,red)))
+       `(echo-bar-green-face ((,c :foreground ,green)))
+       `(echo-bar-yellow-face ((,c :foreground ,yellow)))
+       `(echo-bar-blue-face ((,c :foreground ,blue)))
+       `(echo-bar-magenta-face ((,c :foreground ,mauve)))
+       `(echo-bar-cyan-face ((,c :foreground ,sky)))
+       `(echo-bar-gray-face ((,c :foreground ,overlay2))))))
+   (add-hook 'enable-theme-functions #'+catppuccin-themes-custom-faces)
    ```
 
 2. Change color palettes by customize `catppuccin-<style>-palette-overrides`, style is an choice with `latte`, `frappe`, `macchiato` or `mocha`:
