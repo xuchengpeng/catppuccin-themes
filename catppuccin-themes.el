@@ -299,7 +299,7 @@
     `(markdown-metadata-value-face ((,c :foreground ,green)))
     `(markdown-missing-link-face ((,c :inherit warning)))
     `(markdown-pre-face ((,c :inherit markdown-code-face)))
-    `(markdown-table-face ((,c :foreground ,overlay0)))
+    `(markdown-table-face ((,c :foreground ,subtext1)))
     `(markdown-url-face ((,c :foreground ,subtext0)))
 
     ;; message
@@ -405,7 +405,7 @@
     `(org-scheduled-today ((,c :foreground ,green :weight bold)))
     `(org-sexp-date ((,c :foreground ,subtext0)))
     `(org-special-keyword ((,c :inherit font-lock-keyword-face)))
-    `(org-table ((,c :foreground ,overlay0)))
+    `(org-table ((,c :foreground ,subtext1)))
     `(org-table-header ((,c :inherit (bold org-table))))
     `(org-tag ((,c :foreground ,mauve :weight bold)))
     `(org-tag-group ((,c :inherit org-tag)))
