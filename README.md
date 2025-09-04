@@ -23,7 +23,7 @@ Load the theme in your configuration:
        `(echo-bar-yellow-face ((,c :foreground ,yellow)))
        `(echo-bar-blue-face ((,c :foreground ,blue)))
        `(echo-bar-magenta-face ((,c :foreground ,mauve)))
-       `(echo-bar-cyan-face ((,c :foreground ,sky)))
+       `(echo-bar-cyan-face ((,c :foreground ,teal)))
        `(echo-bar-gray-face ((,c :foreground ,overlay2))))))
    (add-hook 'enable-theme-functions #'+catppuccin-themes-custom-faces)
    ```
