@@ -167,16 +167,16 @@
     `(diff-hl-reverted-hunk-highlight ((,c :inverse-video t)))
 
     ;; dired
-    `(dired-broken-symlink ((,c :background ,red :foreground ,text)))
+    `(dired-broken-symlink ((,c :foreground ,red :underline t)))
     `(dired-directory ((,c :foreground ,blue)))
     `(dired-flagged ((,c :foreground ,maroon :weight bold)))
     `(dired-header ((,c :foreground ,sapphire :weight bold)))
     `(dired-ignored ((,c :inherit shadow)))
     `(dired-mark ((,c :weight bold)))
-    `(dired-marked ((,c :foreground ,sky :weight bold)))
+    `(dired-marked ((,c :foreground ,mauve :weight bold)))
     `(dired-perm-write ((,c :foreground ,green)))
     `(dired-special ((,c :foreground ,yellow)))
-    `(dired-symlink ((,c :foreground ,pink)))
+    `(dired-symlink ((,c :foreground ,pink :underline t)))
     `(dired-warning ((,c :inherit warning)))
 
     ;; ediff
