@@ -24,7 +24,7 @@
     `(info-string ((,c :foreground ,green)))
     `(link ((,c :foreground ,blue :underline t)))
     `(link-visited ((,c :foreground ,lavender :underline t)))
-    `(match ((,c :background ,red :foreground ,mantle)))
+    `(match ((,c :background ,red-intense :foreground ,text)))
     `(menu ((,c :background ,highlight :foreground ,text :inverse-video nil)))
     `(minibuffer-prompt ((,c :foreground ,teal :weight normal)))
     `(read-multiple-choice-face ((,c :inherit completions-first-difference)))
@@ -264,11 +264,11 @@
     `(ido-virtual ((,c :foreground ,sapphire)))
 
     ;; isearch
-    `(isearch ((,c :background ,red :foreground ,mantle)))
-    `(isearch-fail ((,c :background ,maroon :foreground ,mantle)))
-    `(isearch-group-1 ((,c :background ,lavender :foreground ,mantle)))
-    `(isearch-group-2 ((,c :background ,teal :foreground ,mantle)))
-    `(lazy-highlight ((,c :background ,sapphire :foreground ,mantle)))
+    `(isearch ((,c :background ,red-intense :foreground ,text)))
+    `(isearch-fail ((,c :background ,maroon-intense :foreground ,text)))
+    `(isearch-group-1 ((,c :background ,lavender-intense :foreground ,text)))
+    `(isearch-group-2 ((,c :background ,teal-intense :foreground ,text)))
+    `(lazy-highlight ((,c :background ,sapphire-intense :foreground ,text)))
 
     ;; line-number
     `(line-number ((,c :inherit default :background ,base :foreground ,overlay1)))
@@ -419,10 +419,10 @@
     `(org-warning ((,c :inherit warning)))
 
     ;; regexp-builder
-    `(reb-match-0 ((,c :background ,blue :foreground ,mantle)))
-    `(reb-match-1 ((,c :background ,green :foreground ,mantle)))
-    `(reb-match-2 ((,c :background ,red :foreground ,mantle)))
-    `(reb-match-3 ((,c :background ,mauve :foreground ,mantle)))
+    `(reb-match-0 ((,c :background ,blue-intense :foreground ,text)))
+    `(reb-match-1 ((,c :background ,green-intense :foreground ,text)))
+    `(reb-match-2 ((,c :background ,red-intense :foreground ,text)))
+    `(reb-match-3 ((,c :background ,mauve-intense :foreground ,text)))
     `(reb-regexp-grouping-backslash ((,c :inherit font-lock-regexp-grouping-backslash)))
     `(reb-regexp-grouping-construct ((,c :inherit font-lock-regexp-grouping-construct)))
 
@@ -512,13 +512,12 @@
   "Bind NAME's color PALETTE. Optional OVERRIDES are appended to PALETTE."
   (declare (indent 0))
   (let* ((palette-v (symbol-value palette))
-         (overrides-v (symbol-value overrides))
+         (palette-overrides-v (append (symbol-value overrides) palette-v))
          (colors (mapcar #'car palette-v)))
     `(let* ((c '((class color) (min-colors 256)))
             ,@(mapcar (lambda (color)
                         (list color
-                              (or (alist-get color overrides-v)
-                                  (alist-get color palette-v))))
+                              (alist-get color palette-overrides-v)))
                       colors))
        (ignore c ,@colors)
        (custom-theme-set-faces ',name ,@catppuccin-themes-faces)
@@ -535,13 +534,12 @@
                           custom-enabled-themes))
                     (user-error "No enabled catppuccin theme could be found")))
          (palette-v (symbol-value (intern (format "%s-palette" theme))))
-         (overrides-v (symbol-value (intern (format "%s-palette-overrides" theme))))
+         (palette-overrides-v (append (symbol-value (intern (format "%s-palette-overrides" theme))) palette-v))
          (colors (mapcar #'car palette-v)))
     `(let* ((c '((class color) (min-colors 256)))
             ,@(mapcar (lambda (color)
                         (list color
-                              (or (alist-get color overrides-v)
-                                  (alist-get color palette-v))))
+                              (alist-get color palette-overrides-v)))
                       colors))
        (ignore c ,@colors)
        ,@body)))

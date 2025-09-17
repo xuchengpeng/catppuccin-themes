@@ -45,6 +45,21 @@
       (base . "#eff1f5")
       (mantle . "#e6e9ef")
       (crust . "#dce0e8")
+      ;; lighten 50%
+      (rosewater-intense . "#edc4bb")
+      (flamingo-intense . "#eebbbb")
+      (pink-intense . "#f4bae4")
+      (mauve-intense . "#c39cf7")
+      (red-intense . "#e8879c")
+      (maroon-intense . "#f2a2a9")
+      (peach-intense . "#feb185")
+      (yellow-intense . "#efc68e")
+      (green-intense . "#9fcf95")
+      (teal-intense . "#8bc8cc")
+      (sky-intense . "#81d2f2")
+      (sapphire-intense . "#8fcfda")
+      (blue-intense . "#8eb2fa")
+      (lavender-intense . "#b8c3fe")
       ;; extended
       (highlight . "#e3e4e8") ; base darken 5%
       (added . "#b2d9aa") ; green lighten 60%
