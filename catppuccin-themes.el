@@ -96,11 +96,11 @@
 
     ;; avy
     `(avy-background-face ((,c :background ,base :foreground ,text)))
-    `(avy-goto-char-timer-face ((,c :background ,surface0 :foreground ,blue)))
-    `(avy-lead-face ((,c :background ,mauve :foreground ,base)))
-    `(avy-lead-face-0 ((,c :background ,yellow :foreground ,base)))
-    `(avy-lead-face-1 ((,c :background ,overlay0 :foreground ,base)))
-    `(avy-lead-face-2 ((,c :background ,sky :foreground ,base)))
+    `(avy-goto-char-timer-face ((,c :background ,sapphire-intense :foreground ,text)))
+    `(avy-lead-face ((,c :background ,red-intense :foreground ,text)))
+    `(avy-lead-face-0 ((,c :background ,red-intense :foreground ,text)))
+    `(avy-lead-face-1 ((,c :background ,red-intense :foreground ,text)))
+    `(avy-lead-face-2 ((,c :background ,red-intense :foreground ,text)))
 
     ;; bookmark
     `(bookmark-face ((,c :inherit font-lock-constant-face)))
@@ -161,9 +161,9 @@
     `(diff-nonexistent ((,c :inherit bold)))
 
     ;; diff-hl
-    `(diff-hl-change ((,c :foreground ,base :background ,changed-refine)))
-    `(diff-hl-delete ((,c :foreground ,base :background ,removed-refine)))
-    `(diff-hl-insert ((,c :foreground ,base :background ,added-refine)))
+    `(diff-hl-change ((,c :background ,changed-refine)))
+    `(diff-hl-delete ((,c :background ,removed-refine)))
+    `(diff-hl-insert ((,c :background ,added-refine)))
     `(diff-hl-reverted-hunk-highlight ((,c :inverse-video t)))
 
     ;; dired
