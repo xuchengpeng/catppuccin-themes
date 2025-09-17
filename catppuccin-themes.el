@@ -37,7 +37,7 @@
     `(error ((,c :foreground ,red)))
     `(tooltip ((,c :background ,surface0 :foreground ,overlay2)))
     `(tool-bar ((,c :background ,surface0 :foreground unspecified)))
-    `(trailing-whitespace ((,c :background ,peach :foreground ,peach)))
+    `(trailing-whitespace ((,c :background ,red-intense)))
     `(border ((,c :background ,overlay0 :foreground ,text)))
     `(vertical-border ((,c :foreground ,overlay0)))
     `(child-frame-border ((,c :background ,overlay0)))
@@ -477,7 +477,7 @@
     `(which-key-special-key-face ((,c :inherit error)))
 
     ;; whitespace
-    `(whitespace-big-indent ((,c :background ,peach)))
+    `(whitespace-big-indent ((,c :background ,red-intense)))
     `(whitespace-empty ((,c :inherit warning)))
     `(whitespace-hspace ((,c :background unspecified :foreground ,subtext0)))
     `(whitespace-indentation ((,c :foreground ,surface0)))
