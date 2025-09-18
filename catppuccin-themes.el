@@ -24,7 +24,7 @@
     `(info-string ((,c :foreground ,green)))
     `(link ((,c :foreground ,blue :underline t)))
     `(link-visited ((,c :foreground ,lavender :underline t)))
-    `(match ((,c :background ,red-intense :foreground ,text)))
+    `(match ((,c :background ,bg-red-intense :foreground ,text)))
     `(menu ((,c :background ,highlight :foreground ,text :inverse-video nil)))
     `(minibuffer-prompt ((,c :foreground ,teal :weight normal)))
     `(read-multiple-choice-face ((,c :inherit completions-first-difference)))
@@ -37,7 +37,7 @@
     `(error ((,c :foreground ,red)))
     `(tooltip ((,c :background ,surface0 :foreground ,overlay2)))
     `(tool-bar ((,c :background ,surface0 :foreground unspecified)))
-    `(trailing-whitespace ((,c :background ,red-intense)))
+    `(trailing-whitespace ((,c :background ,bg-red-intense)))
     `(border ((,c :background ,overlay0 :foreground ,text)))
     `(vertical-border ((,c :foreground ,overlay0)))
     `(child-frame-border ((,c :background ,overlay0)))
@@ -96,11 +96,11 @@
 
     ;; avy
     `(avy-background-face ((,c :background ,base :foreground ,text)))
-    `(avy-goto-char-timer-face ((,c :background ,sapphire-intense :foreground ,text)))
-    `(avy-lead-face ((,c :background ,red-intense :foreground ,text)))
-    `(avy-lead-face-0 ((,c :background ,red-intense :foreground ,text)))
-    `(avy-lead-face-1 ((,c :background ,red-intense :foreground ,text)))
-    `(avy-lead-face-2 ((,c :background ,red-intense :foreground ,text)))
+    `(avy-goto-char-timer-face ((,c :background ,bg-sapphire-intense :foreground ,text)))
+    `(avy-lead-face ((,c :background ,bg-red-intense :foreground ,text)))
+    `(avy-lead-face-0 ((,c :background ,bg-red-intense :foreground ,text)))
+    `(avy-lead-face-1 ((,c :background ,bg-red-intense :foreground ,text)))
+    `(avy-lead-face-2 ((,c :background ,bg-red-intense :foreground ,text)))
 
     ;; bookmark
     `(bookmark-face ((,c :inherit font-lock-constant-face)))
@@ -264,11 +264,11 @@
     `(ido-virtual ((,c :foreground ,sapphire)))
 
     ;; isearch
-    `(isearch ((,c :background ,red-intense :foreground ,text)))
-    `(isearch-fail ((,c :background ,maroon-intense :foreground ,text)))
-    `(isearch-group-1 ((,c :background ,lavender-intense :foreground ,text)))
-    `(isearch-group-2 ((,c :background ,teal-intense :foreground ,text)))
-    `(lazy-highlight ((,c :background ,sapphire-intense :foreground ,text)))
+    `(isearch ((,c :background ,bg-red-intense :foreground ,text)))
+    `(isearch-fail ((,c :background ,bg-maroon-intense :foreground ,text)))
+    `(isearch-group-1 ((,c :background ,bg-lavender-intense :foreground ,text)))
+    `(isearch-group-2 ((,c :background ,bg-teal-intense :foreground ,text)))
+    `(lazy-highlight ((,c :background ,bg-sapphire-intense :foreground ,text)))
 
     ;; line-number
     `(line-number ((,c :inherit default :background ,base :foreground ,overlay1)))
@@ -429,10 +429,10 @@
     `(outline-8 ((,c :foreground ,maroon :weight bold)))
 
     ;; regexp-builder
-    `(reb-match-0 ((,c :background ,blue-intense :foreground ,text)))
-    `(reb-match-1 ((,c :background ,green-intense :foreground ,text)))
-    `(reb-match-2 ((,c :background ,red-intense :foreground ,text)))
-    `(reb-match-3 ((,c :background ,mauve-intense :foreground ,text)))
+    `(reb-match-0 ((,c :background ,bg-blue-intense :foreground ,text)))
+    `(reb-match-1 ((,c :background ,bg-green-intense :foreground ,text)))
+    `(reb-match-2 ((,c :background ,bg-red-intense :foreground ,text)))
+    `(reb-match-3 ((,c :background ,bg-mauve-intense :foreground ,text)))
     `(reb-regexp-grouping-backslash ((,c :inherit font-lock-regexp-grouping-backslash)))
     `(reb-regexp-grouping-construct ((,c :inherit font-lock-regexp-grouping-construct)))
 
@@ -487,7 +487,7 @@
     `(which-key-special-key-face ((,c :inherit error)))
 
     ;; whitespace
-    `(whitespace-big-indent ((,c :background ,red-intense)))
+    `(whitespace-big-indent ((,c :background ,bg-red-intense)))
     `(whitespace-empty ((,c :inherit warning)))
     `(whitespace-hspace ((,c :background unspecified :foreground ,subtext0)))
     `(whitespace-indentation ((,c :foreground ,surface0)))
