@@ -189,7 +189,7 @@
     `(ediff-even-diff-B ((,c :background ,highlight)))
     `(ediff-even-diff-C ((,c :background ,highlight)))
     `(ediff-fine-diff-A ((,c :background ,removed-refine :foreground ,text)))
-    `(ediff-fine-diff-Ancestor ((,c :background ,sapphire :foreground ,text)))
+    `(ediff-fine-diff-Ancestor ((,c :background ,bg-sapphire-intense :foreground ,text)))
     `(ediff-fine-diff-B ((,c :background ,added-refine :foreground ,text)))
     `(ediff-fine-diff-C ((,c :background ,changed-refine :foreground ,text)))
     `(ediff-odd-diff-A ((,c :inherit ediff-even-diff-A)))
