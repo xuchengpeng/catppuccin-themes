@@ -95,12 +95,12 @@
     `(aw-mode-line-face ((,c :inherit bold)))
 
     ;; avy
-    `(avy-background-face ((,c :background ,base :foreground ,text)))
-    `(avy-goto-char-timer-face ((,c :background ,bg-sapphire-intense :foreground ,text)))
-    `(avy-lead-face ((,c :background ,bg-red-intense :foreground ,text)))
-    `(avy-lead-face-0 ((,c :background ,bg-red-intense :foreground ,text)))
-    `(avy-lead-face-1 ((,c :background ,bg-red-intense :foreground ,text)))
-    `(avy-lead-face-2 ((,c :background ,bg-red-intense :foreground ,text)))
+    `(avy-background-face ((,c :background ,base :foreground ,subtext0 :extend t)))
+    `(avy-goto-char-timer-face ((,c :background ,bg-sapphire-intense :foreground ,text :weight bold)))
+    `(avy-lead-face ((,c :background ,bg-red-intense :foreground ,text :weight bold)))
+    `(avy-lead-face-0 ((,c :background ,bg-red-intense :foreground ,text :weight bold)))
+    `(avy-lead-face-1 ((,c :background ,bg-red-intense :foreground ,text :weight bold)))
+    `(avy-lead-face-2 ((,c :background ,bg-red-intense :foreground ,text :weight bold)))
 
     ;; bookmark
     `(bookmark-face ((,c :inherit font-lock-constant-face)))
