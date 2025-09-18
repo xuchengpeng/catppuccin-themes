@@ -35,7 +35,7 @@
     `(success ((,c :foreground ,green)))
     `(warning ((,c :foreground ,yellow)))
     `(error ((,c :foreground ,red)))
-    `(tooltip ((,c :background ,surface0 :foreground ,overlay2)))
+    `(tooltip ((,c :background ,surface0 :foreground ,subtext1)))
     `(tool-bar ((,c :background ,surface0 :foreground unspecified)))
     `(trailing-whitespace ((,c :background ,bg-red-intense)))
     `(border ((,c :background ,overlay0 :foreground ,text)))
