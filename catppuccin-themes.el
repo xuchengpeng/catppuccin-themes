@@ -27,6 +27,7 @@
     `(match ((,c :background ,bg-red-intense :foreground ,text)))
     `(menu ((,c :background ,highlight :foreground ,text :inverse-video nil)))
     `(minibuffer-prompt ((,c :foreground ,teal :weight normal)))
+    `(minibuffer-nonselected ((,c :background ,bg-sky-intense :foreground ,text)))
     `(read-multiple-choice-face ((,c :inherit completions-first-difference)))
     `(region ((,c :background ,surface1 :foreground ,text :extend t)))
     `(scroll-bar ((,c :background ,surface0 :foreground ,subtext0)))
