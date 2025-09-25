@@ -415,7 +415,7 @@
     `(org-todo ((,c :foreground ,peach)))
     `(org-upcoming-deadline ((,c :foreground ,maroon)))
     `(org-upcoming-distant-deadline ((,c :foreground ,text)))
-    `(org-verbatim ((,c :inherit org-quote)))
+    `(org-verbatim ((,c :foreground ,pink)))
     `(org-verse ((,c :inherit org-block)))
     `(org-warning ((,c :inherit warning)))
 
