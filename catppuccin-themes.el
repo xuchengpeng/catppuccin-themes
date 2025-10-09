@@ -518,21 +518,37 @@
 
 ;;;; Instantiate a catppuccin theme
 
+(defun catppuccin-themes-declare (name family description background-mode)
+  "Declare NAME theme that belongs to FAMILY.
+All of DESCRIPTION, BACKGROUND-MODE have the same meaning as in `catppuccin-themes-theme'."
+  (custom-declare-theme
+   name (intern (format "%s-theme" name))
+   description
+   (list :kind 'color-scheme :background-mode background-mode :family family)))
+
 ;;;###autoload
-(defmacro catppuccin-themes-theme (name palette &optional overrides)
-  "Bind NAME's color PALETTE. Optional OVERRIDES are appended to PALETTE."
+(defmacro catppuccin-themes-theme (name family description background-mode palette overrides)
+  "Define a Catppuccin theme.
+NAME is the name of the theme. FAMILY is the collection of themes it belongs to.
+DESCRIPTION is its documentation string. BACKGROUND-MODE is either `dark' or `light',
+in reference to the theme's background color. OVERRIDES are appended to PALETTE."
   (declare (indent 0))
   (let* ((palette-v (symbol-value palette))
          (palette-overrides-v (append (symbol-value overrides) palette-v))
-         (colors (mapcar #'car palette-v)))
-    `(let* ((c '((class color) (min-colors 256)))
-            ,@(mapcar (lambda (color)
-                        (list color
-                              (alist-get color palette-overrides-v)))
-                      colors))
-       (ignore c ,@colors)
-       (custom-theme-set-faces ',name ,@catppuccin-themes-faces)
-       (custom-theme-set-variables ',name ,@catppuccin-themes-custom-variables))))
+         (colors (mapcar #'car palette-v))
+         (theme-exists-p (custom-theme-p name)))
+    `(progn
+       ,@(unless theme-exists-p
+           (list `(catppuccin-themes-declare ',name ',family ,description ',background-mode)))
+       (let* ((c '((class color) (min-colors 256)))
+              ,@(mapcar (lambda (color)
+                          (list color (alist-get color palette-overrides-v)))
+                        colors))
+         (ignore c ,@colors)
+         (custom-theme-set-faces ',name ,@catppuccin-themes-faces)
+         (custom-theme-set-variables ',name ,@catppuccin-themes-custom-variables)
+         ,@(unless theme-exists-p
+             (list `(provide-theme ',name)))))))
 
 ;;;; Use theme colors
 
@@ -549,8 +565,7 @@
          (colors (mapcar #'car palette-v)))
     `(let* ((c '((class color) (min-colors 256)))
             ,@(mapcar (lambda (color)
-                        (list color
-                              (alist-get color palette-overrides-v)))
+                        (list color (alist-get color palette-overrides-v)))
                       colors))
        (ignore c ,@colors)
        ,@body)))

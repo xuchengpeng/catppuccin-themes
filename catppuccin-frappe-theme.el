@@ -10,13 +10,6 @@
                (require-theme 'catppuccin-themes t))
     (require 'catppuccin-themes))
 
-  ;;;###theme-autoload
-  (deftheme catppuccin-frappe
-    "Catppuccin frappe."
-    :background-mode 'dark
-    :kind 'color-scheme
-    :family 'catppuccin)
-
   (defconst catppuccin-frappe-palette
     '(;; basic
       (rosewater . "#f2d5cf")
@@ -76,9 +69,12 @@
     :group 'catppuccin-themes
     :type 'alist)
 
-  (catppuccin-themes-theme catppuccin-frappe
-                           catppuccin-frappe-palette
-                           catppuccin-frappe-palette-overrides)
+  (catppuccin-themes-theme
+    catppuccin-frappe
+    catppuccin-themes
+    "Catppuccin frappe."
+    dark
+    catppuccin-frappe-palette
+    catppuccin-frappe-palette-overrides))
 
-  (provide-theme 'catppuccin-frappe))
 ;;; catppuccin-frappe-theme.el ends here

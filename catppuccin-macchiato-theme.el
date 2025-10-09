@@ -10,13 +10,6 @@
                (require-theme 'catppuccin-themes t))
     (require 'catppuccin-themes))
 
-  ;;;###theme-autoload
-  (deftheme catppuccin-macchiato
-    "Catppuccin macchiato."
-    :background-mode 'dark
-    :kind 'color-scheme
-    :family 'catppuccin)
-
   (defconst catppuccin-macchiato-palette
     '(;; basic
       (rosewater . "#f4dbd6")
@@ -76,9 +69,12 @@
     :group 'catppuccin-themes
     :type 'alist)
 
-  (catppuccin-themes-theme catppuccin-macchiato
-                           catppuccin-macchiato-palette
-                           catppuccin-macchiato-palette-overrides)
+  (catppuccin-themes-theme
+    catppuccin-macchiato
+    catppuccin-themes
+    "Catppuccin macchiato."
+    dark
+    catppuccin-macchiato-palette
+    catppuccin-macchiato-palette-overrides))
 
-  (provide-theme 'catppuccin-macchiato))
 ;;; catppuccin-macchiato-theme.el ends here
