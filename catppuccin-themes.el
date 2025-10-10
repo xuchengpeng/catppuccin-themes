@@ -518,14 +518,6 @@
 
 ;;;; Instantiate a catppuccin theme
 
-(defun catppuccin-themes-declare (name family description background-mode)
-  "Declare NAME theme that belongs to FAMILY.
-All of DESCRIPTION, BACKGROUND-MODE have the same meaning as in `catppuccin-themes-theme'."
-  (custom-declare-theme
-   name (intern (format "%s-theme" name))
-   description
-   (list :kind 'color-scheme :background-mode background-mode :family family)))
-
 ;;;###autoload
 (defmacro catppuccin-themes-theme (name family description background-mode palette overrides)
   "Define a Catppuccin theme.
@@ -539,7 +531,9 @@ in reference to the theme's background color. OVERRIDES are appended to PALETTE.
          (theme-exists-p (custom-theme-p name)))
     `(progn
        ,@(unless theme-exists-p
-           (list `(catppuccin-themes-declare ',name ',family ,description ',background-mode)))
+           (list `(custom-declare-theme
+                   ',name (intern (format "%s-theme" ',name)) ',description
+                   (list :kind 'color-scheme :background-mode ',background-mode :family ',family))))
        (let* ((c '((class color) (min-colors 256)))
               ,@(mapcar (lambda (color)
                           (list color (alist-get color palette-overrides-v)))
