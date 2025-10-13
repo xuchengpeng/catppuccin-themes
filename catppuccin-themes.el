@@ -553,7 +553,9 @@ in reference to the theme's background color. OVERRIDES are appended to PALETTE.
   (declare (indent 0))
   (let* ((theme (or (car (seq-filter
                           (lambda (th)
-                            (string-prefix-p "catppuccin-" (symbol-name th)))
+                            (when-let* ((properties (get th 'theme-properties))
+                                        (family (plist-get properties :family)))
+                              (eq family 'catppuccin-themes)))
                           custom-enabled-themes))
                     (user-error "No enabled catppuccin theme could be found")))
          (palette-v (symbol-value (intern (format "%s-palette" theme))))
