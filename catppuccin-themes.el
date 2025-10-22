@@ -521,30 +521,27 @@
 ;;;; Instantiate a catppuccin theme
 
 ;;;###autoload
-(defmacro catppuccin-themes-theme (name family description background-mode palette overrides)
+(defun catppuccin-themes-theme (name family description background-mode palette overrides)
   "Define a Catppuccin theme.
 NAME is the name of the theme. FAMILY is the collection of themes it belongs to.
 DESCRIPTION is its documentation string. BACKGROUND-MODE is either `dark' or `light',
 in reference to the theme's background color. OVERRIDES are appended to PALETTE."
-  (declare (indent 0))
-  (let* ((palette-v (symbol-value palette))
-         (palette-overrides-v (append (symbol-value overrides) palette-v))
-         (colors (mapcar #'car palette-v))
+  (let* ((palette-overrides-v (append (symbol-value overrides) (symbol-value palette)))
+         (colors (delete-dups (mapcar #'car palette-overrides-v)))
          (theme-exists-p (custom-theme-p name)))
-    `(progn
-       ,@(unless theme-exists-p
-           (list `(custom-declare-theme
-                   ',name (intern (format "%s-theme" ',name)) ',description
-                   (list :kind 'color-scheme :background-mode ',background-mode :family ',family))))
-       (let* ((c '((class color) (min-colors 256)))
-              ,@(mapcar (lambda (color)
-                          (list color (alist-get color palette-overrides-v)))
-                        colors))
-         (ignore c ,@colors)
-         (custom-theme-set-faces ',name ,@catppuccin-themes-faces)
-         (custom-theme-set-variables ',name ,@catppuccin-themes-custom-variables)
-         ,@(unless theme-exists-p
-             (list `(provide-theme ',name)))))))
+    (unless theme-exists-p
+      (custom-declare-theme
+       name (intern (format "%s-theme" name)) description
+       (list :kind 'color-scheme :background-mode background-mode :family family)))
+    (eval
+     `(let* ((c '((class color) (min-colors 256)))
+             ,@(mapcar (lambda (color)
+                         (list color (alist-get color palette-overrides-v)))
+                       colors))
+        (custom-theme-set-faces ',name ,@catppuccin-themes-faces)
+        (custom-theme-set-variables ',name ,@catppuccin-themes-custom-variables)))
+    (unless theme-exists-p
+      (provide-theme name))))
 
 ;;;; Use theme colors
 
@@ -558,9 +555,9 @@ in reference to the theme's background color. OVERRIDES are appended to PALETTE.
                               (eq family 'catppuccin-themes)))
                           custom-enabled-themes))
                     (user-error "No enabled catppuccin theme could be found")))
-         (palette-v (symbol-value (intern (format "%s-palette" theme))))
-         (palette-overrides-v (append (symbol-value (intern (format "%s-palette-overrides" theme))) palette-v))
-         (colors (mapcar #'car palette-v)))
+         (palette-overrides-v (append (symbol-value (intern (format "%s-palette-overrides" theme)))
+                                      (symbol-value (intern (format "%s-palette" theme)))))
+         (colors (delete-dups (mapcar #'car palette-overrides-v))))
     `(let* ((c '((class color) (min-colors 256)))
             ,@(mapcar (lambda (color)
                         (list color (alist-get color palette-overrides-v)))
