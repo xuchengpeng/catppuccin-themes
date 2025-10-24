@@ -160,7 +160,7 @@
     `(diff-function ((,c :background ,surface2)))
     `(diff-header ((,c :foreground ,blue)))
     `(diff-hunk-header ((,c :background ,surface2 :foreground ,text)))
-    `(diff-index ((,c :slant italic)))
+    `(diff-index ((,c :inherit italic)))
     `(diff-nonexistent ((,c :inherit bold)))
 
     ;; diff-hl
