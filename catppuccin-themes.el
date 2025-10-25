@@ -28,7 +28,7 @@
     `(match ((,c :background ,bg-red-intense :foreground ,text)))
     `(menu ((,c :background ,highlight :foreground ,text :inverse-video nil)))
     `(minibuffer-prompt ((,c :foreground ,teal :weight normal)))
-    `(minibuffer-nonselected ((,c :background ,bg-sky-intense :foreground ,text)))
+    `(minibuffer-nonselected ((,c :background ,bg-teal-intense :foreground ,text)))
     `(next-error ((,c :background ,bg-red-intense :foreground ,text :extend t)))
     `(read-multiple-choice-face ((,c :inherit completions-first-difference)))
     `(region ((,c :background ,surface1 :foreground ,text :extend t)))
