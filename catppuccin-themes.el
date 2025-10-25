@@ -12,6 +12,7 @@
     `(default ((,c :background ,base :foreground ,text)))
     `(bold ((,c :weight bold)))
     `(italic ((,c :slant italic)))
+    `(bold-italic ((,c :inherit (bold italic))))
     `(underline ((,c :underline t)))
     `(cursor ((,c :background ,rosewater)))
     `(escape-glyph ((,c :foreground ,red)))
