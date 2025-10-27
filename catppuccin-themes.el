@@ -15,7 +15,7 @@
     `(bold-italic ((,c :inherit (bold italic))))
     `(underline ((,c :underline t)))
     `(cursor ((,c :background ,rosewater)))
-    `(escape-glyph ((,c :foreground ,red)))
+    `(escape-glyph ((,c :foreground ,lavender)))
     `(ffap ((,c :inherit match)))
     `(fringe ((,c :background unspecified :foreground ,surface1)))
     `(help-argument-name ((,c :inherit italic :foreground ,text)))
