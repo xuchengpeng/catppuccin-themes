@@ -540,31 +540,36 @@ in reference to the theme's background color. OVERRIDES are appended to PALETTE.
                          (list color (alist-get color palette-overrides-v)))
                        colors))
         (custom-theme-set-faces ',name ,@catppuccin-themes-faces)
-        (custom-theme-set-variables ',name ,@catppuccin-themes-custom-variables)))
+        (custom-theme-set-variables ',name ,@catppuccin-themes-custom-variables))
+     :lexical)
     (unless theme-exists-p
       (provide-theme name))))
 
 ;;;; Use theme colors
 
+(defun catppuccin-themes-with-colors-subr (expressions)
+  "Do the work of `catppuccin-themes-with-colors' for EXPRESSIONS."
+  (when-let* ((theme (car (seq-filter
+                           (lambda (th)
+                             (when-let* ((properties (get th 'theme-properties))
+                                         (family (plist-get properties :family)))
+                               (eq family 'catppuccin-themes)))
+                           custom-enabled-themes)))
+              (palette-overrides-v (append (symbol-value (intern-soft (format "%s-palette-overrides" theme)))
+                                           (symbol-value (intern-soft (format "%s-palette" theme)))))
+              (colors (delete-dups (mapcar #'car palette-overrides-v))))
+    (eval
+     `(let* ((c '((class color) (min-colors 256)))
+             ,@(mapcar (lambda (color)
+                         (list color (alist-get color palette-overrides-v)))
+                       colors))
+        ,@expressions)
+     :lexical)))
+
 (defmacro catppuccin-themes-with-colors (&rest body)
   "Evaluate BODY with colors from current palette bound."
   (declare (indent 0))
-  (let* ((theme (or (car (seq-filter
-                          (lambda (th)
-                            (when-let* ((properties (get th 'theme-properties))
-                                        (family (plist-get properties :family)))
-                              (eq family 'catppuccin-themes)))
-                          custom-enabled-themes))
-                    (user-error "No enabled catppuccin theme could be found")))
-         (palette-overrides-v (append (symbol-value (intern-soft (format "%s-palette-overrides" theme)))
-                                      (symbol-value (intern-soft (format "%s-palette" theme)))))
-         (colors (delete-dups (mapcar #'car palette-overrides-v))))
-    `(let* ((c '((class color) (min-colors 256)))
-            ,@(mapcar (lambda (color)
-                        (list color (alist-get color palette-overrides-v)))
-                      colors))
-       (ignore c ,@colors)
-       ,@body)))
+  `(catppuccin-themes-with-colors-subr ',body))
 
 ;;;; Add themes from package to path
 
