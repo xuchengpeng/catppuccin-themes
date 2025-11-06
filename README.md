@@ -18,7 +18,7 @@ Load the theme in your configuration:
 
 ## Customize
 
-1. Add plugin support, for example:
+1. Add plugin support, evaluate the code with a function after loading catppuccin-themes, for example:
    ``` emacs-lisp
    (defun +catppuccin-themes-custom-faces (&rest _)
     (catppuccin-themes-with-colors
@@ -30,7 +30,7 @@ Load the theme in your configuration:
        `(echo-bar-magenta-face ((,c :foreground ,mauve)))
        `(echo-bar-cyan-face ((,c :foreground ,teal)))
        `(echo-bar-gray-face ((,c :foreground ,overlay2))))))
-   (add-hook 'enable-theme-functions #'+catppuccin-themes-custom-faces)
+   (add-hook '+themes-after-load-theme-hook #'+catppuccin-themes-custom-faces)
    ```
 
 2. Change color palettes by customize `catppuccin-<style>-palette-overrides`, style is an choice with `latte`, `frappe`, `macchiato` or `mocha`:
