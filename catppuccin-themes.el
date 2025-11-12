@@ -64,6 +64,11 @@
     (bg-tab-current base)
     (bg-tab-other surface0)
 
+    (fg-line-number-inactive overlay1)
+    (fg-line-number-active lavender)
+    (bg-line-number-inactive unspecified)
+    (bg-line-number-active unspecified)
+
     ;; Diffs
 
     (bg-added added)
@@ -101,10 +106,11 @@
     (keybind blue)
     (name mauve)
     (identifier yellow)
+    (fringe unspecified)
 
     (err red)
     (warning yellow)
-    (info green)
+    (info teal)
 
     (underline-err red)
     (underline-warning yellow)
