@@ -33,29 +33,51 @@
      (base "#eff1f5")
      (mantle "#e6e9ef")
      (crust "#dce0e8")
-     ;; accent backgrounds, lighten 50%
-     (bg-rosewater-intense "#edc4bb")
-     (bg-flamingo-intense "#eebbbb")
-     (bg-pink-intense "#f4bae4")
-     (bg-mauve-intense "#c39cf7")
-     (bg-red-intense "#e8879c")
-     (bg-maroon-intense "#f2a2a9")
-     (bg-peach-intense "#feb185")
-     (bg-yellow-intense "#efc68e")
-     (bg-green-intense "#9fcf95")
-     (bg-teal-intense "#8bc8cc")
-     (bg-sky-intense "#81d2f2")
-     (bg-sapphire-intense "#8fcfda")
-     (bg-blue-intense "#8eb2fa")
-     (bg-lavender-intense "#b8c3fe")
+     ;; accent backgrounds
+     (bg-rosewater-intense "#eab8ae") ; lighten 40%
+     (bg-flamingo-intense "#eaaeae")
+     (bg-pink-intense "#f2acdf")
+     (bg-mauve-intense "#b788f5")
+     (bg-red-intense "#e36f88")
+     (bg-maroon-intense "#f08f97")
+     (bg-peach-intense "#fea26c")
+     (bg-yellow-intense "#ebbb77")
+     (bg-green-intense "#8cc67f")
+     (bg-teal-intense "#73bdc1")
+     (bg-sky-intense "#68c9ef")
+     (bg-sapphire-intense "#79c5d2")
+     (bg-blue-intense "#78a3f9")
+     (bg-lavender-intense "#aab7fd")
+     (bg-rosewater-subtle "#efcac2") ; lighten 55%
+     (bg-flamingo-subtle "#efc2c2")
+     (bg-pink-subtle "#f5c1e7")
+     (bg-mauve-subtle "#c9a5f7")
+     (bg-red-subtle "#ea93a5")
+     (bg-maroon-subtle "#f3abb1")
+     (bg-peach-subtle "#feb991")
+     (bg-yellow-subtle "#f0cc99")
+     (bg-green-subtle "#a9d49f")
+     (bg-teal-subtle "#96cdd1")
+     (bg-sky-subtle "#8ed6f3")
+     (bg-sapphire-subtle "#9ad3dd")
+     (bg-blue-subtle "#99bafa")
+     (bg-lavender-subtle "#bfc9fe")
+     (bg-rosewater-nuanced "#f4dbd6") ; lighten 70%
+     (bg-flamingo-nuanced "#f4d6d6")
+     (bg-pink-nuanced "#f8d5ef")
+     (bg-mauve-nuanced "#dbc3fa")
+     (bg-red-nuanced "#f1b7c3")
+     (bg-maroon-nuanced "#f7c7cb")
+     (bg-peach-nuanced "#fed0b5")
+     (bg-yellow-nuanced "#f5ddbb")
+     (bg-green-nuanced "#c5e2bf")
+     (bg-teal-nuanced "#b9dee0")
+     (bg-sky-nuanced "#b3e3f7")
+     (bg-sapphire-nuanced "#bce2e8")
+     (bg-blue-nuanced "#bbd1fc")
+     (bg-lavender-nuanced "#d4dbfe")
      ;; extended
      (highlight "#e3e4e8") ; base darken 5%
-     (added "#b2d9aa") ; green lighten 60%
-     (added-refine "#8cc67f") ; green lighten 40%
-     (changed "#f2d1a4") ; yellow lighten 60%
-     (changed-refine "#ebbb77") ; yellow lighten 40%
-     (removed "#ed9faf") ; red lighten 60%
-     (removed-refine "#e36f88") ; red lighten 40%
      )
    catppuccin-themes-common-palette-mappings)
   "Catppuccin latte palette.")

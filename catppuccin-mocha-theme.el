@@ -33,29 +33,51 @@
      (base "#1e1e2e")
      (mantle "#181825")
      (crust "#11111b")
-     ;; accent backgrounds, darken 50%
-     (bg-rosewater-intense "#7a706e")
-     (bg-flamingo-intense "#796666")
-     (bg-pink-intense "#7a6173")
-     (bg-mauve-intense "#65537b")
-     (bg-red-intense "#794554")
-     (bg-maroon-intense "#755056")
-     (bg-peach-intense "#7d5943")
-     (bg-yellow-intense "#7c7157")
-     (bg-green-intense "#537150")
-     (bg-teal-intense "#4a716a")
-     (bg-sky-intense "#446e75")
-     (bg-sapphire-intense "#3a6376")
-     (bg-blue-intense "#445a7d")
-     (bg-lavender-intense "#5a5f7f")
+     ;; accent backgrounds
+     (bg-rosewater-intense "#938684") ; darken 40%
+     (bg-flamingo-intense "#917b7b")
+     (bg-pink-intense "#93748a")
+     (bg-mauve-intense "#796394")
+     (bg-red-intense "#915364")
+     (bg-maroon-intense "#8c6067")
+     (bg-peach-intense "#956b51")
+     (bg-yellow-intense "#958769")
+     (bg-green-intense "#638860")
+     (bg-teal-intense "#58877f")
+     (bg-sky-intense "#52848c")
+     (bg-sapphire-intense "#45778d")
+     (bg-blue-intense "#526c95")
+     (bg-lavender-intense "#6c7298")
+     (bg-rosewater-subtle "#6e6463") ; darken 55%
+     (bg-flamingo-subtle "#6c5c5c")
+     (bg-pink-subtle "#6e5767")
+     (bg-mauve-subtle "#5b4a6f")
+     (bg-red-subtle "#6d3e4b")
+     (bg-maroon-subtle "#69474d")
+     (bg-peach-subtle "#70503c")
+     (bg-yellow-subtle "#70654e")
+     (bg-green-subtle "#4a6648")
+     (bg-teal-subtle "#42655f")
+     (bg-sky-subtle "#3d6369")
+     (bg-sapphire-subtle "#34596a")
+     (bg-blue-subtle "#3d5170")
+     (bg-lavender-subtle "#515572")
+     (bg-rosewater-nuanced "#494342") ; darken 70%
+     (bg-flamingo-nuanced "#483d3d")
+     (bg-pink-nuanced "#493a45")
+     (bg-mauve-nuanced "#3c314a")
+     (bg-red-nuanced "#482932")
+     (bg-maroon-nuanced "#463033")
+     (bg-peach-nuanced "#4b3528")
+     (bg-yellow-nuanced "#4a4334")
+     (bg-green-nuanced "#314430")
+     (bg-teal-nuanced "#2c433f")
+     (bg-sky-nuanced "#294246")
+     (bg-sapphire-nuanced "#223b46")
+     (bg-blue-nuanced "#29364b")
+     (bg-lavender-nuanced "#36394c")
      ;; extended
      (highlight "#292938") ; base lighten 5%
-     (added "#425a40") ; green darken 60%
-     (added-refine "#638860") ; green darken 40%
-     (changed "#635a46") ; yellow darken 60%
-     (changed-refine "#958769") ; yellow darken 40%
-     (removed "#613743") ; red darken 60%
-     (removed-refine "#915364") ; red darken 40%
      )
    catppuccin-themes-common-palette-mappings)
   "Catppuccin mocha palette.")

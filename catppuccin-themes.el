@@ -32,17 +32,70 @@
   '(
     ;; Basic values
     (bg-main base)
-    (bg-dim surface0)
+    (bg-dim crust)
     (fg-main text)
     (fg-dim subtext0)
     (fg-alt subtext1)
-    (bg-active surface2)
-    (bg-inactive surface1)
+    (bg-active surface1)
+    (bg-inactive surface0)
     (border overlay0)
+
+    ;; Common accent foregrounds
+
+    (red-warmer      red)
+    (red-cooler      red)
+    (red-faint       red)
+    (red-intense     red)
+    (green-warmer    green)
+    (green-cooler    green)
+    (green-faint     green)
+    (green-intense   green)
+    (yellow-warmer   yellow)
+    (yellow-cooler   yellow)
+    (yellow-faint    yellow)
+    (yellow-intense  yellow)
+    (blue-warmer     blue)
+    (blue-cooler     blue)
+    (blue-faint      blue)
+    (blue-intense    blue)
+    (magenta         mauve)
+    (magenta-warmer  mauve)
+    (magenta-cooler  mauve)
+    (magenta-faint   mauve)
+    (magenta-intense mauve)
+    (cyan            teal)
+    (cyan-warmer     teal)
+    (cyan-cooler     teal)
+    (cyan-faint      teal)
+    (cyan-intense    teal)
+
+    ;; Common accent backgrounds
+
+    (bg-magenta-intense bg-mauve-intense)
+    (bg-cyan-intense bg-teal-intense)
+    (bg-magenta-subtle bg-mauve-subtle)
+    (bg-cyan-subtle bg-teal-subtle)
+    (bg-magenta-nuanced bg-mauve-nuanced)
+    (bg-cyan-nuanced bg-teal-nuanced)
+
+    ;; Graphs
+
+    (bg-graph-red-0 bg-red-intense)
+    (bg-graph-red-1 bg-red-subtle)
+    (bg-graph-green-0 bg-green-intense)
+    (bg-graph-green-1 bg-green-subtle)
+    (bg-graph-yellow-0 bg-yellow-intense)
+    (bg-graph-yellow-1 bg-yellow-subtle)
+    (bg-graph-blue-0 bg-blue-intense)
+    (bg-graph-blue-1 bg-blue-subtle)
+    (bg-graph-magenta-0 bg-mauve-intense)
+    (bg-graph-magenta-1 bg-mauve-subtle)
+    (bg-graph-cyan-0 bg-teal-intense)
+    (bg-graph-cyan-1 bg-teal-subtle)
 
     ;; Special purpose
 
-    (bg-completion bg-lavender-intense)
+    (bg-completion bg-sky-nuanced)
     (bg-hover highlight)
     (bg-hover-secondary surface1)
     (bg-hl-line highlight)
@@ -51,10 +104,10 @@
 
     (bg-mode-line-active crust)
     (fg-mode-line-active text)
-    (border-mode-line-active crust)
+    (border-mode-line-active bg-mode-line-active)
     (bg-mode-line-inactive mantle)
     (fg-mode-line-inactive overlay1)
-    (border-mode-line-inactive mantle)
+    (border-mode-line-inactive bg-mode-line-inactive)
 
     (modeline-err red)
     (modeline-warning yellow)
@@ -71,24 +124,24 @@
 
     ;; Diffs
 
-    (bg-added added)
-    (bg-added-faint added-refine)
-    (bg-added-refine added-refine)
-    (bg-added-fringe added-refine)
+    (bg-added bg-green-nuanced)
+    (bg-added-faint bg-green-intense)
+    (bg-added-refine bg-green-intense)
+    (bg-added-fringe bg-green-intense)
     (fg-added text)
     (fg-added-intense text)
 
-    (bg-changed changed)
-    (bg-changed-faint changed-refine)
-    (bg-changed-refine changed-refine)
-    (bg-changed-fringe changed-refine)
+    (bg-changed bg-yellow-nuanced)
+    (bg-changed-faint bg-yellow-intense)
+    (bg-changed-refine bg-yellow-intense)
+    (bg-changed-fringe bg-yellow-intense)
     (fg-changed text)
     (fg-changed-intense text)
 
-    (bg-removed removed)
-    (bg-removed-faint removed-refine)
-    (bg-removed-refine removed-refine)
-    (bg-removed-fringe removed-refine)
+    (bg-removed bg-red-nuanced)
+    (bg-removed-faint bg-red-intense)
+    (bg-removed-refine bg-red-intense)
+    (bg-removed-fringe bg-red-intense)
     (fg-removed text)
     (fg-removed-intense text)
 
@@ -103,30 +156,7 @@
     ;; General mappings
 
     (cursor rosewater)
-    (keybind blue)
-    (name mauve)
-    (identifier yellow)
     (fringe unspecified)
-
-    (err red)
-    (warning yellow)
-    (info teal)
-
-    (underline-err red)
-    (underline-warning yellow)
-    (underline-note green)
-
-    (bg-prominent-err bg-red-intense)
-    (fg-prominent-err text)
-    (bg-prominent-warning bg-yellow-intense)
-    (fg-prominent-warning text)
-    (bg-prominent-note bg-sky-intense)
-    (fg-prominent-note text)
-
-    (bg-active-argument bg-yellow-intense)
-    (fg-active-argument text)
-    (bg-active-value bg-sky-intense)
-    (fg-active-value text)
 
     ;; Code mappings
 
@@ -147,91 +177,18 @@
     (variable text)
     (variable-use text)
 
-    ;; Accent mappings
-
-    (accent-0 blue)
-    (accent-1 mauve)
-    (accent-2 sky)
-    (accent-3 red)
-
-    ;; Completion mappings
-
-    (fg-completion-match-0 blue)
-    (fg-completion-match-1 mauve)
-    (fg-completion-match-2 sky)
-    (fg-completion-match-3 red)
-
-    ;; Date mappings
-
-    (date-common teal)
-    (date-deadline red)
-    (date-deadline-subtle red)
-    (date-event fg-alt)
-    (date-holiday red)
-    (date-holiday-other blue)
-    (date-range fg-alt)
-    (date-scheduled yellow)
-    (date-scheduled-subtle yellow)
-    (date-weekday teal)
-    (date-weekend mauve)
-
     ;; Link mappings
 
-    (fg-link blue)
-    (underline-link blue)
-    (fg-link-symbolic sky)
-    (underline-link-symbolic sky)
     (fg-link-visited lavender)
     (underline-link-visited lavender)
-
-    ;; Mail mappings
-
-    (mail-cite-0 blue)
-    (mail-cite-1 yellow)
-    (mail-cite-2 sapphire)
-    (mail-cite-3 red)
-    (mail-part sky)
-    (mail-recipient blue)
-    (mail-subject mauve)
-    (mail-other sapphire)
-
-    ;; Mark mappings
-
-    (bg-mark-delete bg-red-intense)
-    (fg-mark-delete text)
-    (bg-mark-select bg-sapphire-intense)
-    (fg-mark-select text)
-    (bg-mark-other bg-yellow-intense)
-    (fg-mark-other text)
-
-    ;; Prompt mappings
-
-    (fg-prompt teal)
 
     ;; Prose mappings
 
     (fg-prose-code green)
-    (fg-prose-macro pink)
+    (fg-prose-macro rosewater)
     (fg-prose-verbatim pink)
-    (prose-done green)
-    (prose-todo red)
-    (prose-metadata fg-dim)
-    (prose-metadata-value fg-alt)
-    (prose-table fg-alt)
     (prose-table-formula pink)
     (prose-tag blue)
-
-    ;; Search mappings
-
-    (bg-search-current bg-yellow-intense)
-    (bg-search-lazy bg-sky-intense)
-    (bg-search-static bg-mauve-intense)
-    (bg-search-replace bg-red-intense)
-
-    (bg-search-rx-group-0 bg-blue-intense)
-    (bg-search-rx-group-1 bg-green-intense)
-    (bg-search-rx-group-2 bg-red-intense)
-    (bg-search-rx-group-3 bg-mauve-intense)
 
     ;; Heading mappings
 
