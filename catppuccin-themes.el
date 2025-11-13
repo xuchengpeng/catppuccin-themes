@@ -124,22 +124,22 @@
 
     ;; Diffs
 
-    (bg-added bg-green-nuanced)
-    (bg-added-faint bg-green-intense)
+    (bg-added bg-green-subtle)
+    (bg-added-faint bg-green-nuanced)
     (bg-added-refine bg-green-intense)
     (bg-added-fringe bg-green-intense)
     (fg-added text)
     (fg-added-intense text)
 
-    (bg-changed bg-yellow-nuanced)
-    (bg-changed-faint bg-yellow-intense)
+    (bg-changed bg-yellow-subtle)
+    (bg-changed-faint bg-yellow-nuanced)
     (bg-changed-refine bg-yellow-intense)
     (bg-changed-fringe bg-yellow-intense)
     (fg-changed text)
     (fg-changed-intense text)
 
-    (bg-removed bg-red-nuanced)
-    (bg-removed-faint bg-red-intense)
+    (bg-removed bg-red-subtle)
+    (bg-removed-faint bg-red-nuanced)
     (bg-removed-refine bg-red-intense)
     (bg-removed-fringe bg-red-intense)
     (fg-removed text)
