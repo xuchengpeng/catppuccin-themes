@@ -164,7 +164,6 @@
     (comment overlay2)
     (constant peach)
     (docstring subtext0)
-    (docmarkup peach)
     (fnname blue)
     (fnname-call blue)
     (keyword mauve)
