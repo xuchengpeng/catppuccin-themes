@@ -32,12 +32,12 @@
   '(
     ;; Basic values
     (bg-main base)
-    (bg-dim crust)
+    (bg-dim surface0)
     (fg-main text)
     (fg-dim subtext0)
     (fg-alt subtext1)
-    (bg-active surface1)
-    (bg-inactive surface0)
+    (bg-active surface2)
+    (bg-inactive surface1)
     (border overlay0)
 
     ;; Common accent foregrounds
@@ -95,9 +95,9 @@
 
     ;; Special purpose
 
-    (bg-completion bg-sky-nuanced)
+    (bg-completion surface1)
     (bg-hover highlight)
-    (bg-hover-secondary surface1)
+    (bg-hover-secondary surface2)
     (bg-hl-line highlight)
     (bg-region surface2)
     (fg-region text)
