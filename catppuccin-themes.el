@@ -233,7 +233,6 @@ They are all designed to only consider Catppuccin themes."
 ;;;###autoload
 (defun catppuccin-themes-blend (color1 color2 &optional alpha)
   "Blends COLOR1 onto COLOR2 (hexidecimal strings) with ALPHA (a float between 0 and 1)."
-  (setq alpha (or alpha 0.5))
   (pcase-let ((`(,r ,g ,b) (color-blend (color-name-to-rgb color1) (color-name-to-rgb color2) alpha)))
     (color-rgb-to-hex r g b 2)))
 
