@@ -231,9 +231,9 @@ They are all designed to only consider Catppuccin themes."
 (modus-themes-define-derivative-command catppuccin-themes list-colors-current)
 
 ;;;###autoload
-(defun catppuccin-themes-blend (color1 color2 &optional alpha)
-  "Blends COLOR1 onto COLOR2 (hexidecimal strings) with ALPHA (a float between 0 and 1)."
-  (pcase-let ((`(,r ,g ,b) (color-blend (color-name-to-rgb color1) (color-name-to-rgb color2) alpha)))
+(defun catppuccin-themes-blend (a b &optional alpha)
+  "Blend the two colors A and B in linear space with ALPHA (a float between 0 and 1)."
+  (pcase-let ((`(,r ,g ,b) (color-blend (color-name-to-rgb a) (color-name-to-rgb b) alpha)))
     (color-rgb-to-hex r g b 2)))
 
 ;;;###autoload
