@@ -42,40 +42,24 @@
 
     ;; Common accent foregrounds
 
-    (red-warmer      red)
-    (red-cooler      red)
-    (red-faint       red)
-    (red-intense     red)
-    (green-warmer    green)
-    (green-cooler    green)
-    (green-faint     green)
-    (green-intense   green)
-    (yellow-warmer   yellow)
-    (yellow-cooler   yellow)
-    (yellow-faint    yellow)
-    (yellow-intense  yellow)
-    (blue-warmer     blue)
-    (blue-cooler     blue)
-    (blue-faint      blue)
-    (blue-intense    blue)
     (magenta         mauve)
-    (magenta-warmer  mauve)
-    (magenta-cooler  mauve)
-    (magenta-faint   mauve)
-    (magenta-intense mauve)
+    (magenta-warmer  mauve-warmer)
+    (magenta-cooler  mauve-cooler)
+    (magenta-faint   mauve-faint)
+    (magenta-intense mauve-intense)
     (cyan            teal)
-    (cyan-warmer     teal)
-    (cyan-cooler     teal)
-    (cyan-faint      teal)
-    (cyan-intense    teal)
+    (cyan-warmer     teal-warmer)
+    (cyan-cooler     teal-cooler)
+    (cyan-faint      teal-faint)
+    (cyan-intense    teal-intense)
 
     ;; Common accent backgrounds
 
     (bg-magenta-intense bg-mauve-intense)
-    (bg-cyan-intense bg-teal-intense)
     (bg-magenta-subtle bg-mauve-subtle)
-    (bg-cyan-subtle bg-teal-subtle)
     (bg-magenta-nuanced bg-mauve-nuanced)
+    (bg-cyan-intense bg-teal-intense)
+    (bg-cyan-subtle bg-teal-subtle)
     (bg-cyan-nuanced bg-teal-nuanced)
 
     ;; Graphs
@@ -88,10 +72,10 @@
     (bg-graph-yellow-1 bg-yellow-subtle)
     (bg-graph-blue-0 bg-blue-intense)
     (bg-graph-blue-1 bg-blue-subtle)
-    (bg-graph-magenta-0 bg-mauve-intense)
-    (bg-graph-magenta-1 bg-mauve-subtle)
-    (bg-graph-cyan-0 bg-teal-intense)
-    (bg-graph-cyan-1 bg-teal-subtle)
+    (bg-graph-magenta-0 bg-magenta-intense)
+    (bg-graph-magenta-1 bg-magenta-subtle)
+    (bg-graph-cyan-0 bg-cyan-intense)
+    (bg-graph-cyan-1 bg-cyan-subtle)
 
     ;; Special purpose
 
@@ -124,33 +108,12 @@
 
     ;; Diffs
 
-    (bg-added bg-green-subtle)
-    (bg-added-faint bg-green-nuanced)
-    (bg-added-refine bg-green-intense)
-    (bg-added-fringe bg-green-intense)
-    (fg-added text)
-    (fg-added-intense text)
-
-    (bg-changed bg-yellow-subtle)
-    (bg-changed-faint bg-yellow-nuanced)
-    (bg-changed-refine bg-yellow-intense)
-    (bg-changed-fringe bg-yellow-intense)
-    (fg-changed text)
-    (fg-changed-intense text)
-
-    (bg-removed bg-red-subtle)
-    (bg-removed-faint bg-red-nuanced)
-    (bg-removed-refine bg-red-intense)
-    (bg-removed-fringe bg-red-intense)
-    (fg-removed text)
-    (fg-removed-intense text)
-
     (bg-diff-context highlight)
 
     ;; Paren match
 
-    (bg-paren-match bg-sky-intense)
-    (bg-paren-expression bg-pink-intense)
+    (bg-paren-match bg-cyan-intense)
+    (bg-paren-expression bg-cyan-nuanced)
     (underline-paren-match unspecified)
 
     ;; General mappings
@@ -180,6 +143,8 @@
 
     ;; Link mappings
 
+    (fg-link blue)
+    (underline-link blue)
     (fg-link-visited lavender)
     (underline-link-visited lavender)
 
@@ -264,6 +229,25 @@ They are all designed to only consider Catppuccin themes."
 
 ;;;###autoload (autoload 'catppuccin-themes-list-colors-current "catppuccin-themes")
 (modus-themes-define-derivative-command catppuccin-themes list-colors-current)
+
+;;;###autoload
+(defun catppuccin-themes-blend (color1 color2 &optional alpha)
+  "Blends COLOR1 onto COLOR2 (hexidecimal strings) with ALPHA (a float between 0 and 1)."
+  (setq alpha (or alpha 0.5))
+  (pcase-let ((`(,r ,g ,b) (color-blend (color-name-to-rgb color1) (color-name-to-rgb color2) alpha)))
+    (color-rgb-to-hex r g b 2)))
+
+;;;###autoload
+(defun catppuccin-themes-lighten (color value)
+  "Lighten COLOR by VALUE% (0–100)."
+  (let* ((alpha (/ value 100.0)))
+    (catppuccin-themes-blend color "#ffffff" (- 1 alpha))))
+
+;;;###autoload
+(defun catppuccin-themes-darken (color value)
+  "Darken COLOR by VALUE% (0–100)."
+  (let* ((alpha (/ value 100.0)))
+    (catppuccin-themes-blend color "#000000" (- 1 alpha))))
 
 ;;;###autoload
 (when load-file-name
