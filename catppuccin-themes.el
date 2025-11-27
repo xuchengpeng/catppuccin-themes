@@ -97,9 +97,9 @@
     (modeline-warning yellow)
     (modeline-info blue)
 
-    (bg-tab-bar mantle)
-    (bg-tab-current base)
-    (bg-tab-other surface0)
+    (bg-tab-bar bg-dim)
+    (bg-tab-current bg-main)
+    (bg-tab-other bg-inactive)
 
     (fg-line-number-inactive overlay1)
     (fg-line-number-active lavender)
