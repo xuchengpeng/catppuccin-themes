@@ -47,9 +47,9 @@
        (push (list (intern (format "%s-cooler" name)) (catppuccin-themes-darken (catppuccin-themes-blend value "#0000ff" 0.9) 20)) derived-colors)
        (push (list (intern (format "%s-faint" name)) (catppuccin-themes-darken value 10)) derived-colors)
        (push (list (intern (format "%s-intense" name)) (catppuccin-themes-lighten value 5)) derived-colors)
-       (push (list (intern (format "bg-%s-intense" name)) (catppuccin-themes-lighten value 30)) derived-colors)
-       (push (list (intern (format "bg-%s-subtle" name)) (catppuccin-themes-lighten value 50))  derived-colors)
-       (push (list (intern (format "bg-%s-nuanced" name)) (catppuccin-themes-lighten value 70)) derived-colors))
+       (push (list (intern (format "bg-%s-intense" name)) (catppuccin-themes-lighten value 35)) derived-colors)
+       (push (list (intern (format "bg-%s-subtle" name)) (catppuccin-themes-lighten value 55))  derived-colors)
+       (push (list (intern (format "bg-%s-nuanced" name)) (catppuccin-themes-lighten value 75)) derived-colors))
      (push (list (intern "highlight") (catppuccin-themes-darken bg-main 5)) derived-colors)
      (append
       base-colors
