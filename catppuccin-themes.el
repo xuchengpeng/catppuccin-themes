@@ -199,7 +199,7 @@ They are all designed to only consider Catppuccin themes."
   :init-value nil)
 
 (cl-defmethod modus-themes-get-themes (&context (catppuccin-themes-take-over-modus-themes-mode (eql t)))
-  "Return list of Catppuccin themes, per `catppuccin-themes-take-over-modus-themes-mode'."
+  "Return Catppuccin themes per `catppuccin-themes-take-over-modus-themes-mode'."
   (if-let* ((themes (modus-themes-get-all-known-themes 'catppuccin-themes))
             (sorted-a-z (sort themes #'string-lessp))
             (sorted-light-dark (modus-themes-sort sorted-a-z 'light)))
