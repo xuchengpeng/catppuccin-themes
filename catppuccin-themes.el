@@ -80,6 +80,7 @@
     ;; Special purpose
 
     (bg-completion surface1)
+    (bg-popup bg-dim)
     (bg-hover highlight)
     (bg-hover-secondary surface2)
     (bg-hl-line highlight)
