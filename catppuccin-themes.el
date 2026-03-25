@@ -232,9 +232,26 @@ They are all designed to only consider Catppuccin themes."
 (modus-themes-define-derivative-command catppuccin-themes list-colors-current)
 
 ;;;###autoload
+(defun catppuccin-themes-color-blend (a b &optional alpha)
+  "Blend the two colors A and B in linear space with ALPHA.
+A and B should be lists (RED GREEN BLUE), where each element is
+between 0.0 and 1.0, inclusive.  ALPHA controls the influence A
+has on the result and should be between 0.0 and 1.0, inclusive.
+
+For instance:
+
+   (catppuccin-themes-color-blend \\='(1 0.5 1) \\='(0 0 0) 0.75)
+      => (0.75 0.375 0.75)"
+  (setq alpha (or alpha 0.5))
+  (let (blend)
+    (dotimes (i 3)
+      (push (+ (* (nth i a) alpha) (* (nth i b) (- 1 alpha))) blend))
+    (nreverse blend)))
+
+;;;###autoload
 (defun catppuccin-themes-blend (a b &optional alpha)
   "Blend the two colors A and B in linear space with ALPHA (a float between 0 and 1)."
-  (pcase-let ((`(,r ,g ,b) (color-blend (color-name-to-rgb a) (color-name-to-rgb b) alpha)))
+  (pcase-let ((`(,r ,g ,b) (catppuccin-themes-color-blend (color-name-to-rgb a) (color-name-to-rgb b) alpha)))
     (color-rgb-to-hex r g b 2)))
 
 ;;;###autoload
