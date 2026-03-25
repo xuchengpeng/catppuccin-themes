@@ -8,6 +8,8 @@
 Load the theme in your configuration:
 
 ``` emacs-lisp
+(use-package modus-themes
+  :ensure t)
 (use-package catppuccin-themes
   :vc (:url "https://github.com/xuchengpeng/catppuccin-themes")
   :init
