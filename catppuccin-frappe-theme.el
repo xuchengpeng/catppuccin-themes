@@ -67,7 +67,7 @@
  'catppuccin-themes
  "Catppuccin frappe."
  'dark
- 'modus-vivendi-palette
+ 'modus-themes-vivendi-palette
  'catppuccin-frappe-palette
  'catppuccin-frappe-palette-overrides)
 

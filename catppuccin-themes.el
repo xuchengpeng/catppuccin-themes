@@ -171,10 +171,10 @@
   "Common palette mappings for the Catppuccin themes.")
 
 (defconst catppuccin-themes-with-properties
-  '((catppuccin-latte catppuccin-themes "Catppuccin latte." light modus-operandi-palette catppuccin-latte-palette catppuccin-latte-palette-overrides)
-    (catppuccin-frappe catppuccin-themes "Catppuccin frappe." dark modus-vivendi-palette catppuccin-frappe-palette catppuccin-frappe-palette-overrides)
-    (catppuccin-macchiato catppuccin-themes "Catppuccin macchiato." dark modus-vivendi-palette catppuccin-macchiato-palette catppuccin-macchiato-palette-overrides)
-    (catppuccin-mocha catppuccin-themes "Catppuccin mocha." dark modus-vivendi-palette catppuccin-mocha-palette catppuccin-mocha-palette-overrides)))
+  '((catppuccin-latte catppuccin-themes "Catppuccin latte." light modus-themes-operandi-palette catppuccin-latte-palette catppuccin-latte-palette-overrides)
+    (catppuccin-frappe catppuccin-themes "Catppuccin frappe." dark modus-themes-vivendi-palette catppuccin-frappe-palette catppuccin-frappe-palette-overrides)
+    (catppuccin-macchiato catppuccin-themes "Catppuccin macchiato." dark modus-themes-vivendi-palette catppuccin-macchiato-palette catppuccin-macchiato-palette-overrides)
+    (catppuccin-mocha catppuccin-themes "Catppuccin mocha." dark modus-themes-vivendi-palette catppuccin-mocha-palette catppuccin-mocha-palette-overrides)))
 
 (defvar catppuccin-themes--declared-p nil)
 

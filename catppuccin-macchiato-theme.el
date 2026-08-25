@@ -67,7 +67,7 @@
  'catppuccin-themes
  "Catppuccin macchiato."
  'dark
- 'modus-vivendi-palette
+ 'modus-themes-vivendi-palette
  'catppuccin-macchiato-palette
  'catppuccin-macchiato-palette-overrides)
 

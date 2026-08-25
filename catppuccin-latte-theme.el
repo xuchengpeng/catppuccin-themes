@@ -67,7 +67,7 @@
  'catppuccin-themes
  "Catppuccin latte."
  'light
- 'modus-operandi-palette
+ 'modus-themes-operandi-palette
  'catppuccin-latte-palette
  'catppuccin-latte-palette-overrides)
 

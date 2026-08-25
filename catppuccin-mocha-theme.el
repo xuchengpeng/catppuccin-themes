@@ -67,7 +67,7 @@
  'catppuccin-themes
  "Catppuccin mocha."
  'dark
- 'modus-vivendi-palette
+ 'modus-themes-vivendi-palette
  'catppuccin-mocha-palette
  'catppuccin-mocha-palette-overrides)
 
