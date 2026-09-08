@@ -8,12 +8,9 @@
 Load the theme in your configuration:
 
 ``` emacs-lisp
-(use-package modus-themes
-  :ensure t)
 (use-package catppuccin-themes
   :vc (:url "https://github.com/xuchengpeng/catppuccin-themes")
-  :init
-  (catppuccin-themes-take-over-modus-themes-mode 1)
   :config
-  (modus-themes-load-theme 'catppuccin-latte))
+  (catppuccin-themes-load-theme 'catppuccin-latte)
+  (keymap-global-set "<f5>" #'catppuccin-themes-toggle))
 ```

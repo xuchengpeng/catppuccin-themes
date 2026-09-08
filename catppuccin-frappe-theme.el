@@ -2,73 +2,53 @@
 ;;; Commentary:
 ;;; Code:
 
-(require 'catppuccin-themes)
+(eval-and-compile
+  (unless (and (fboundp 'require-theme)
+               load-file-name
+               (equal (file-name-directory load-file-name)
+                      (expand-file-name "themes/" data-directory))
+               (require-theme 'catppuccin-themes t))
+    (require 'catppuccin-themes))
 
-(defconst catppuccin-frappe-base-colors
-  '((rosewater "#f2d5cf")
-    (flamingo "#eebebe")
-    (pink "#f4b8e4")
-    (mauve "#ca9ee6")
-    (red "#e78284")
-    (maroon "#ea999c")
-    (peach "#ef9f76")
-    (yellow "#e5c890")
-    (green "#a6d189")
-    (teal "#81c8be")
-    (sky "#99d1db")
-    (sapphire "#85c1dc")
-    (blue "#8caaee")
-    (lavender "#babbf1")
-    (text "#c6d0f5")
-    (subtext1 "#b5bfe2")
-    (subtext0 "#a5adce")
-    (overlay2 "#949cbb")
-    (overlay1 "#838ba7")
-    (overlay0 "#737994")
-    (surface2 "#626880")
-    (surface1 "#51576d")
-    (surface0 "#414559")
-    (base "#303446")
-    (mantle "#292c3c")
-    (crust "#232634"))
-  "Catppuccin frappe base colors.")
+  (defvar catppuccin-frappe-palette
+    '((rosewater "#f2d5cf")
+      (flamingo "#eebebe")
+      (pink "#f4b8e4")
+      (mauve "#ca9ee6")
+      (red "#e78284")
+      (maroon "#ea999c")
+      (peach "#ef9f76")
+      (yellow "#e5c890")
+      (green "#a6d189")
+      (teal "#81c8be")
+      (sky "#99d1db")
+      (sapphire "#85c1dc")
+      (blue "#8caaee")
+      (lavender "#babbf1")
+      (text "#c6d0f5")
+      (subtext1 "#b5bfe2")
+      (subtext0 "#a5adce")
+      (overlay2 "#949cbb")
+      (overlay1 "#838ba7")
+      (overlay0 "#737994")
+      (surface2 "#626880")
+      (surface1 "#51576d")
+      (surface0 "#414559")
+      (base "#303446")
+      (mantle "#292c3c")
+      (crust "#232634")
+      ;; extended
+      (cursor-line "#3a3e4f") ; base lighten 5%
+      (bg-added "#425336") ; green darken 60%
+      (bg-added-refine "#637d52") ; green darken 40%
+      (bg-changed "#38445f") ; blue darken 60%
+      (bg-changed-refine "#54658e") ; blue darken 40%
+      (bg-removed "#5c3434") ; red darken 60%
+      (bg-removed-refine "#8a4d4f") ; red darken 40%
+      )
+    "Catppuccin frappe base colors.")
 
-(defconst catppuccin-frappe-palette
-  (append
-   (let* ((base-colors catppuccin-frappe-base-colors)
-          (bg-main (car (alist-get 'base base-colors)))
-          (six-colors (seq-filter
-                       (lambda (color)
-                         (memq (car color) '(red green yellow blue mauve teal)))
-                       base-colors))
-          (derived-colors nil))
-     (pcase-dolist (`(,name ,value) six-colors)
-       (push (list (intern (format "%s-warmer" name)) (catppuccin-themes-lighten (catppuccin-themes-blend value "#ff0000" 0.9) 20)) derived-colors)
-       (push (list (intern (format "%s-cooler" name)) (catppuccin-themes-lighten (catppuccin-themes-blend value "#0000ff" 0.9) 20)) derived-colors)
-       (push (list (intern (format "%s-faint" name)) (catppuccin-themes-lighten value 10)) derived-colors)
-       (push (list (intern (format "%s-intense" name)) (catppuccin-themes-darken value 5)) derived-colors)
-       (push (list (intern (format "bg-%s-intense" name)) (catppuccin-themes-darken value 35)) derived-colors)
-       (push (list (intern (format "bg-%s-subtle" name)) (catppuccin-themes-darken value 55))  derived-colors)
-       (push (list (intern (format "bg-%s-nuanced" name)) (catppuccin-themes-darken value 75)) derived-colors))
-     (push (list (intern "highlight") (catppuccin-themes-lighten bg-main 5)) derived-colors)
-     (append
-      base-colors
-      derived-colors))
-   catppuccin-themes-common-palette-mappings)
-  "Catppuccin frappe palette.")
+  (catppuccin-themes-define-theme catppuccin-frappe dark "Catppuccin frappe"))
 
-(defcustom catppuccin-frappe-palette-overrides nil
-  "Overrides for `catppuccin-frappe-palette'."
-  :group 'catppuccin-themes
-  :type 'alist)
-
-(modus-themes-theme
- 'catppuccin-frappe
- 'catppuccin-themes
- "Catppuccin frappe."
- 'dark
- 'modus-themes-vivendi-palette
- 'catppuccin-frappe-palette
- 'catppuccin-frappe-palette-overrides)
-
+(provide 'catppuccin-frappe-theme)
 ;;; catppuccin-frappe-theme.el ends here
