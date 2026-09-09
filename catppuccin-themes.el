@@ -171,7 +171,7 @@
               `(compilation-column-number ((t :foreground ,overlay1)))
 
               ;; completions
-              `(completions-annotations ((t :foreground ,overlay2)))
+              `(completions-annotations ((t :foreground ,overlay2 :slant italic)))
               `(completions-common-part ((t :foreground ,blue :weight bold)))
               `(completions-first-difference ((t :foreground ,peach)))
               `(completions-highlight ((t :background ,surface0)))
