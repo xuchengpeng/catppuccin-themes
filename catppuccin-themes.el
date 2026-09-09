@@ -13,11 +13,17 @@
   "Specify two themes for the `catppuccin-themes-toggle' command."
   :group 'catppuccin-themes)
 
+(defcustom catppuccin-themes-after-load-theme-hook nil
+  "Hook that runs after loading a Catppuccin theme."
+  :type 'hook
+  :group 'catppuccin-themes)
+
 ;;;###autoload
 (defun catppuccin-themes-load-theme (theme)
   "Load THEME while disabling other themes and return THEME."
   (mapc #'disable-theme custom-enabled-themes)
   (load-theme theme :no-confirm)
+  (run-hooks 'catppuccin-themes-after-load-theme-hook)
   theme)
 
 ;;;###autoload
