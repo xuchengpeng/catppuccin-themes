@@ -13,6 +13,7 @@
   "Specify two themes for the `catppuccin-themes-toggle' command."
   :group 'catppuccin-themes)
 
+;;;###autoload
 (defun catppuccin-themes-load-theme (theme)
   "Load THEME while disabling other themes and return THEME."
   (mapc #'disable-theme custom-enabled-themes)
@@ -60,7 +61,8 @@
               `(link ((t :foreground ,blue :underline t)))
               `(link-visited ((t :foreground ,lavender :underline t)))
               `(shadow ((t :foreground ,overlay1)))
-              `(minibuffer-prompt ((t :foreground ,blue :background unspecified)))
+              `(minibuffer-prompt ((t :foreground ,blue :weight bold)))
+              `(minibuffer-nonselected ((t :inverse-video t)))
               `(escape-glyph ((t :foreground ,pink)))
               `(homoglyph ((t :foreground ,pink)))
               `(region ((t :background ,surface1 :extend t)))
