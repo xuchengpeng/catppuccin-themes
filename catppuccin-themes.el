@@ -78,7 +78,7 @@
               `(vertical-border ((t :foreground ,surface1)))
               `(child-frame-border ((t :background ,overlay0 :foreground ,text)))
               `(tooltip ((t :background ,surface0 :foreground ,text)))
-              `(highlight ((t :background ,surface1 :foreground ,text)))
+              `(highlight ((t :background ,surface0 :foreground ,text)))
               `(error ((t :foreground ,red :weight bold)))
               `(warning ((t :foreground ,yellow :weight bold)))
               `(success ((t :foreground ,green :weight bold)))
@@ -391,7 +391,7 @@
               `(isearch-fail ((t :foreground ,base :background ,red)))
               `(isearch-group-1 ((t :foreground ,base :background ,blue)))
               `(isearch-group-2 ((t :foreground ,base :background ,teal)))
-              `(lazy-highlight ((t :foreground ,text :background ,surface2)))
+              `(lazy-highlight ((t :foreground ,subtext1 :background ,surface1)))
               `(match ((t :foreground ,base :background ,red)))
               `(query-replace ((t :foreground ,base :background ,peach :weight bold)))
 
