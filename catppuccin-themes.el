@@ -595,7 +595,7 @@
               `(tab-line-tab-modified ((t :foreground ,yellow)))
 
               ;; vertico
-              `(vertico-current ((t :background ,cursor-line :extend t)))
+              `(vertico-current ((t :background ,surface0 :extend t)))
 
               ;; vundo
               `(vundo-default ((t :foreground ,overlay1)))
