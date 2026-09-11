@@ -647,7 +647,7 @@
               `(window-divider-last-pixel ((t :foreground ,surface1))))
              (custom-theme-set-variables
               ',name
-              `(ansi-color-names-vector [,surface1 ,red ,green ,yellow ,blue ,mauve ,sky ,subtext0])
+              `(ansi-color-names-vector [,surface1 ,red ,green ,yellow ,blue ,pink ,teal ,subtext0])
               '(diff-font-lock-syntax nil)
               '(frame-background-mode ',background-mode))
              ,@(unless theme-exists-p
