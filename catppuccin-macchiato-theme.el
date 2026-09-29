@@ -38,7 +38,7 @@
       (mantle "#1e2030")
       (crust "#181926")
       ;; extended
-      (cursor-line . "#2e3143") ; base lighten 5%
+      (cursor-line "#2e3143") ; base lighten 5%
       (bg-added "#42573b") ; green darken 60%
       (bg-added-refine "#638259") ; green darken 40%
       (bg-changed "#374561") ; blue darken 60%
