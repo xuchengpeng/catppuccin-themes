@@ -549,7 +549,7 @@
               `(outline-8 ((t :foreground ,maroon :weight bold)))
 
               ;; pulse
-              `(pulse-highlight-start-face ((t :background ,lavender :extend t)))
+              `(pulse-highlight-start-face ((t :background ,surface1 :extend t)))
 
               ;; regexp-builder
               `(reb-match-0 ((t :foreground ,blue :background ,base :inverse-video t)))
