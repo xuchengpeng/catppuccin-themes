@@ -14,3 +14,19 @@ Load the theme in your configuration:
   (catppuccin-themes-load-theme 'catppuccin-latte)
   (keymap-global-set "<f5>" #'catppuccin-themes-toggle))
 ```
+
+To add support for faces of other packages or your own faces, for example:
+
+``` emacs-lisp
+(defun +themes-custom-faces (&rest _)
+  (catppuccin-themes-with-colors
+    (custom-set-faces
+     `(echo-bar-red-face ((t :foreground ,red)))
+     `(echo-bar-green-face ((t :foreground ,green)))
+     `(echo-bar-yellow-face ((t :foreground ,yellow)))
+     `(echo-bar-blue-face ((t :foreground ,blue)))
+     `(echo-bar-magenta-face ((t :foreground ,mauve)))
+     `(echo-bar-cyan-face ((t :foreground ,sky)))
+     `(echo-bar-gray-face ((t :foreground ,subtext0))))))
+(add-hook 'catppuccin-themes-after-load-theme-hook #'+themes-custom-faces)
+```
