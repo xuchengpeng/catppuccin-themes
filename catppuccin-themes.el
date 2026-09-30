@@ -11,6 +11,7 @@
 
 (defcustom catppuccin-themes-to-toggle '(catppuccin-latte catppuccin-mocha)
   "Specify two themes for the `catppuccin-themes-toggle' command."
+  :type '(list symbol symbol)
   :group 'catppuccin-themes)
 
 (defcustom catppuccin-themes-after-load-theme-hook nil
